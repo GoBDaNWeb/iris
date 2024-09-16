@@ -1,0 +1,79 @@
+include input/input
+include textarea/textarea
+include checkbox/checkbox
+include radio/radio	
+include select/select
+include file/file
+
+
+mixin form(data)
+	//- атрибуты
+	- attr = data.attr || ''
+	- submitValue = data.submitValue
+	
+	form
+		div(class='form form--js' class=data.dopClass)&attributes(attr)
+			each itemRow in data.listRow
+				div(class="form-row")
+					each itemField in itemRow.listField
+						if (itemField.input)
+							+input(itemField.input)
+						if (itemField.textarea)
+							+textarea(itemField.textarea)
+						if (itemField.date)
+							+inputDate(itemField.date)
+						if (itemField.selectCustom)
+							+selectCustom(itemField.selectCustom)
+						if (itemField.checkboxSwitch)
+							+checkboxSwitch(itemField.checkboxSwitch)
+						if (itemField.checkboxBase)
+							+checkboxBase(itemField.checkboxBase)
+						if (itemField.radioBase)
+							+radioBase(itemField.radioBase)
+
+			div(class="form-row")
+				if (data.submitValue)
+					input(class="button button-violet button-65" class=data.buttonClass type="submit" name="submit"  value=`${submitValue}`)
+				if(data.policy == 'Y')
+					p(class="form-policy txt-xs") Заполняя данную форму вы соглашаетесь с политикой конфиденциальности сайта. Сайт защищен Google recaptcha. #[a(href="#" target='_blank') Политика конфиденциальности] и #[a(href="#" target='_blank') условия использования].
+
+			div(class="form-message form-message--js")
+
+
+mixin formPopup(data)
+	//- атрибуты
+	- attr = data.attr || ''
+	- submitValue = data.submitValue
+	
+	form
+		div(class='form form--js' class=data.dopClass)&attributes(attr)
+			each itemRow in data.listRow
+				div(class="form-row")
+					each itemField in itemRow.listField
+						if (itemField.input)
+							+input(itemField.input)
+						if (itemField.textarea)
+							+textarea(itemField.textarea)
+						if (itemField.date)
+							+inputDate(itemField.date)
+						if (itemField.selectCustom)
+							+selectCustom(itemField.selectCustom)
+						if (itemField.checkboxSwitch)
+							+checkboxSwitch(itemField.checkboxSwitch)
+						if (itemField.checkboxBase)
+							+checkboxBase(itemField.checkboxBase)
+						if (itemField.radioBase)
+							+radioBase(itemField.radioBase)
+
+			div(class="form-row")
+				if (data.submitValue)
+					a(class="popup-button" href="#popup-thank" data-effect="mfp-move-horizontal")
+						input(class="button button-violet button-65" class=data.buttonClass type="submit" name="submit"  value=`${submitValue}`)
+				if(data.policy == 'Y')
+					p(class="form-policy txt-xs") Заполняя данную форму вы соглашаетесь с политикой конфиденциальности сайта. Сайт защищен Google recaptcha. #[a(href="#" target='_blank') Политика конфиденциальности] и #[a(href="#" target='_blank') условия использования].
+
+			div(class="form-message form-message--js")
+
+
+
+

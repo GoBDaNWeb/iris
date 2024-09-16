@@ -1,0 +1,97 @@
+
+mixin contentMenu(data)
+	div.dropdown-content.hide-desk
+		+topMenu({
+			items:[
+				{
+					text: 'Услуги',
+					href: '#stage',
+				},
+				{
+					text: 'Кейсы',
+					href: '#cases',
+				},
+				{
+					text: 'Компания',
+					href: '#about-company',
+				},
+				
+				{
+					text: 'Контакты',
+					href: '#contacts',
+				},
+			],
+		})
+		//-
+			+button({
+				dopClass: 'button-light button-disk popup-button',
+				href: '#call',
+				buttonText: 'Заказать проект'
+			})
+		div.header__contacts
+			+linkPhone({
+				dopClass: '',
+				phoneHref: '+78003508554',
+				text: '8 800 350-85-54'
+			})
+			+linkMail({
+				dopClass: '',
+				mailHref: 'info@eclat.moscow',
+				text: 'info@eclat.moscow'
+			})
+
+
+
+
+mixin dropDownPhoneButton(data)
+	div.dropbtn.hide-desk-phone(data-content=data.data) 
+		+icon('mob-menu', 'icon--stroke')
+	//-
+		+dropDownPhoneButton({
+			data: 'mob-menu'
+		})
+
+
+
+mixin dropDownButton(data)
+	div.dropbtn-small(data-content=data.data class=data.dopClass) 
+		if(data.text)
+			span !{data.text}
+		if(data.icon)
+			+icon('mob-menu', 'icon--stroke')
+
+	//-
+		+dropDownButton({
+			text: 'Ru',
+			data: 'lang'
+		})
+
+mixin dropDownPhoneContent(data)
+	div.dropdown.hide-desk-phone(data-content=data.data)
+		div.close-dropbtn(id="closebtn") 
+			+icon('cross-popup', 'icon--stroke')
+		if (data.contentMenu)
+			+contentMenu(data)
+	//-
+		//главное меню мобилка
+		+dropDownPhoneContent({
+			dopClass:'dropdown-phone-full',
+			data: 'mob-menu',
+			contentMenu: {},
+		})
+
+mixin dropDownContent(data)
+	div.dropdown.dropdown-content-small(data-content=data.data)
+		if (data.selectLang)
+			+selectLang(data)
+
+	//-
+		+dropDownContent({
+			data: 'mob-menu',
+			contentMenu: {},
+		})
+
+
+
+
+	

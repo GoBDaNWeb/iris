@@ -1,0 +1,213 @@
+//- img
+mixin retina(data)
+	- attr = data.attr || ''
+
+	img(
+		data-src=data.path
+		src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAAAAAAAAAICTAEAOw=="
+		class="b-lazy"
+		class=data.dopClass
+		alt=data.alt
+		)&attributes(attr, attribute)
+
+mixin img(data)
+	- attr = data.attr || ''	
+	img(
+		
+		data-src=data.path
+		data-src-small=data.small
+		data-src-medium=data.medium
+		src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAAAAAAAAAICTAEAOw=="
+		class="b-lazy"
+		class=data.dopClass
+		alt=data.alt
+		)&attributes(attr, attribute)
+
+	//-
+		без retina
+		+img({
+			path: 'assets/images/example/1.jpg',
+			dopClass: 'image-class',
+			alt: 'image',
+			small: 'assets/images/example/2.jpg',
+			medium: 'assets/images/example/3.jpg',
+		})
+		c retina
+		+img({
+			path: 'assets/images/example/1.jpg',
+			retina: 'assets/images/example/1.jpg|assets/images/example/2.jpg',
+			dopClass: 'image-class',
+			alt: 'image',
+			small: 'assets/images/example/2.jpg',
+			medium: 'assets/images/example/3.jpg',
+		})
+
+//- picture
+mixin picture(data)
+	- attr = data.attr || ''
+
+	picture
+		each item in data.items
+			source(srcset=item.path media=item.width )
+		img(
+			data-src=data.path 
+			src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAAAAAAAAAICTAEAOw==" 
+			class="b-lazy" 
+			class=data.dopClass 
+			alt=data.alt)&attributes(attr, attribute)
+
+	//-
+		+picture({
+			path: 'assets/images/example/3.jpg',
+			alt: 'image',
+			dopClass: 'image-class',
+			attr: {
+				'attr': '111'
+			},
+			items:[
+				{
+					path: 'assets/images/example/1.jpg',
+					width: '(max-width: 1000px)'
+				},
+				{
+					path: 'assets/images/example/2.jpg',
+					width: '(max-width: 1200px)'
+				}
+			]
+		})
+
+mixin sliderImg(data)
+
+	img(
+		data-lazy=data.path  
+		src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAAAAAAAAAICTAEAOw=="
+		class="" 
+		class=data.dopClass 
+		alt="image")
+	//-
+		+sliderSlickImg({
+			path: 'assets/images/example/1.jpg',
+			dopClass: 'image-class',
+		})	
+//-svg
+//-mixin icon(name,mod)
+mixin icon(data)
+	- mod = mod || ''
+
+	svg(aria-hidden="true" class="icon-svg " + data.name + ' ' + data.mod xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink")
+		use(xlink:href='_sprite.svg#' + data.name)
+	
+
+	//-
+		+icon({
+			name: 'circle-heat',
+			mod: 'icon--stroke'
+		})
+		+icon({
+			name: 'circle-heat',
+			mod: 'icon--fill'
+		})
+		+icon({
+			name: 'circle-heat',
+			mod: 'icon--full'
+		})
+	
+
+
+		
+//- Ul
+mixin ul(data)
+	ul(class=data.dopClass)
+		each item in data.items
+			li !{item.txt}
+
+	//-
+		+ul({
+			dopClass: 'ul-class',
+			items:[
+				{
+					content: 'text1',
+				},
+				{
+					content: 'text2',
+				}
+			]
+		})
+
+//- Ol
+mixin ol(data)
+	ol(class=data.dopClass)
+		each item in data.items
+			li= item.content
+
+	//-
+		+ol({
+			dopClass: 'ol-class',
+			items:[
+				{
+					content: 'text1',
+				},
+				{
+					content: 'text2',
+				}
+			]
+		})
+
+//- linkPhone
+mixin linkPhone(data)
+	- phoneHref = data.phoneHref
+
+	a(href=`tel:${phoneHref}` class="link-phone" class=data.dopClass) 
+		if data.text
+			sapn !{data.text}
+		if data.icon
+			div(class="icon ")
+				+icon(data.icon)
+
+		
+
+	//-
+		+linkPhone({
+			dopClass: '',
+			phoneHref: '+79159510770',
+			text: '+7-915-951-07-70'
+		})
+		<a href="tel:+79159510770" class="phone">+79159510770 </a>
+
+
+//- linkWatsApp
+mixin linkWatsApp(data)
+	- phoneHref = data.phoneHref
+
+	a(href=`https://wa.me/${phoneHref}?text=` class="link-watsapp" class=data.dopClass)  
+		if data.text
+			span !{data.text}
+		if data.icon 
+			div(class="icon radius-10")
+				+icon(data.icon)
+	//-
+		+linkWatsApp({
+			dopClass: '',
+			phoneHref: '79159510770',
+			text: '+7-915-951-07-70'
+		})
+		<a href="https://wa.me/71111111111?text=" class="phone">+79159510770 </a>
+
+//- linkMail
+mixin linkMail(data)
+	- mailHref = data.mailHref
+
+	a(href=`mailto:${mailHref}` class="link-mail" class=data.dopClass) 
+		if data.text
+			span !{data.text}
+		if data.icon 
+			div(class="icon ")
+				+icon(data.icon)
+
+	//-
+		+linkMail({
+			dopClass: '',
+			mailHref: 'someone@example.com',
+			text: 'Отправлять электронную почту'
+		})
+		<a href="mailto:someone@example.com">Отправлять электронную почту</a>

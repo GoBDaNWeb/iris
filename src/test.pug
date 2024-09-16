@@ -1,0 +1,31 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Test'
+
+block content
+	.container
+		
+		+breadcrumbs({
+			list: [
+			{
+				text: 'Главная',
+				href: 'main.html'
+			},
+			{
+				href: '#',
+				text: 'О компании',
+			},
+			{
+				text: 'Контакты'
+			}
+			]
+		})
+
+
+
+
+
+

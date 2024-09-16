@@ -1,0 +1,204 @@
+include ../open-close-content/open-close-content
+
+mixin cardType1(data)
+	div(class="card card-type-1 radius-20" )
+		if(data.img)
+			div(class="card-type-1__img " class=data.dopClassImg)
+				+img(data.img)
+		if(data.imgPhone)
+			div(class="card-type-1__img " class=data.dopClassImgPhone)
+				+img(data.imgPhone)
+		span(class="card--value") !{data.value}
+		span(class="card--desc") !{data.desc}
+		if(data.digit1)
+			.digits 
+				.digits__digit 
+					span !{data.digit1}
+					p !{data.digit1Text}
+				.digits__digit 
+					span !{data.digit2}
+					p !{data.digit2Text}
+				.digits__digit 
+					span !{data.digit3}
+					p !{data.digit3Text}
+
+	//-
+		+cardType1({
+			value: 'значение',
+			desc: 'text'
+		})
+
+mixin cardType2(data)
+	div(class="card card-type-2 radius-20" )
+		+icon(data.icon)
+		h3(class="card--ttl") !{data.title}
+		span(class="card--desc") !{data.desc}
+	
+	//-
+		+cardType2({
+			icon:{
+				name:'main-about-1',
+				mod:''
+			},
+			title: 'R&D',
+			desc: 'в состав IRIS входит ООО “КОНСУМЕД”, производитель инновационных препаратов, включающей в себя: команду разработчиков и успешные СТМ.'
+		})
+
+mixin cardType3(data)
+	if data.href
+		a(href="#" class="card card-type-3 radius-20" class=data.dopClass data-count=data.count)
+			if(data.img)
+				div(class="card--img radius-10")
+					+img(data.img)
+			if(data.sliderImg)
+				div(class="card--img radius-10")
+					+sliderImg(data.sliderImg)
+			h3(class="card--ttl") !{data.title}
+			if data.txt
+				div(class="card--desc ") !{data.txt}
+				
+			if data.list
+				div(class="card--desc  ")
+					ul
+						each item in data.list
+							li !{item.txt}
+			+button({
+				dopClass: 'button-more button-50 txt-s',
+				buttonText: 'Подробнее',
+				icon:{
+					name: 'arrow-button',
+					mod: 'icon--stroke'
+				}
+			})
+			
+	else
+		div(class="card card-type-3 radius-20" class=data.dopClass data-count=data.count)
+			if(data.img)
+				div(class="card--img radius-10")
+					+img(data.img)
+			if(data.sliderImg)
+				div(class="card--img radius-10")
+					+sliderImg(data.sliderImg)
+			h3(class="card--ttl") !{data.title}
+			if data.txt
+				div(class="card--desc ") !{data.txt}
+				
+			if data.list
+				div(class="card--desc ")
+					ul
+						each item in data.list
+							li !{item.txt}
+			+button({
+				dopClass: 'button-more button-50 txt-s',
+				buttonText: 'Подробнее',
+				icon:{
+					name: 'arrow-button',
+					mod: 'icon--stroke'
+				}
+			})
+	//-
+		+cardType3({
+			count: '01',
+			href:'#',
+			img:{
+				path: 'assets/images/example/services-main/services-iris-1.png'
+			},
+			title: 'Производителям',
+			list: [
+				{
+					txt:'Маркетинговые контракты участниками партнерства ИРИС'
+				},
+				{
+					txt:'E-commerce'
+				},
+				{
+					txt:'Производство СТМ'
+				}
+			],
+			txt: 'Вступление в ИРИС: повышение маржинальности за счет доступа к маркетинговым контрактам ИРИС и портфелю ВМТ (высокомаржинальные товары) ИРИС'
+		})
+
+mixin cardType4(data)
+	
+	div( class="card card-type-4 radius-20" class=data.dopClass )
+		if(data.img)
+			div(class="card--img radius-15")
+				+img(data.img)
+		if(data.sliderImg)
+			div(class="card--img radius-15")
+				+sliderImg(data.sliderImg)
+		h3(class="card--ttl") !{data.title}
+		each itemContent in data.content
+			span(class="card--sub-ttl") !{itemContent.subtitle}
+			div(class="card--desc  ")
+				if itemContent.hiddenItem
+					+hiddenItem(itemContent.hiddenItem)
+				if itemContent.list
+					ul
+						each item in itemContent.list
+							li !{item.text}
+	//-
+		+cardType4({
+			img:{
+				path: 'assets/images/example/services-main/services-iris-1.png'
+			},
+			title: 'БАД',
+			content:[
+				{
+					subtitle:'Irispharma',
+					list: [
+						{
+							txt:'Маркетинговые контракты участниками партнерства ИРИС'
+						},
+						{
+							txt:'E-commerce'
+						},
+						{
+							txt:'Производство СТМ'
+						}
+					],
+				},
+			]
+		})
+
+mixin cardBrand(data)
+	if data.href
+		a(href=data.href class="card card-brand " class=data.dopClass )
+			if(data.img)
+				div(class="card--img radius-20")
+					+img(data.img)
+			if(data.sliderImg)
+				div(class="card--img radius-20")
+					+sliderImg(data.sliderImg)
+			+button({
+				dopClass: 'button-go ',
+				buttonText: 'Перейти на сайт',
+				icon:{
+					name: 'arrow-button',
+					mod: 'icon--stroke'
+				}
+			})
+				
+	else
+		div(class="card-brand " class=data.dopClass )
+			if(data.img)
+				div(class="card--img radius-20")
+					+img(data.img)
+			if(data.sliderImg)
+				div(class="card--img radius-20")
+					+sliderImg(data.sliderImg)
+			+button({
+				href:'#',
+				dopClass: 'button-go ',
+				buttonText: 'Перейти на сайт',
+				icon:{
+					name: 'arrow-button',
+					mod: 'icon--stroke'
+				}
+			})
+	//-
+		+cardBrand({
+			img:{
+				path:'assets/images/example/brand/brand-1.png'
+			}
+		})

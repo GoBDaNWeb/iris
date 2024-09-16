@@ -1,0 +1,119 @@
+include ../../helpers/mixins
+
+mixin sliderNew(data)
+	.slider-container
+		.slider-new-button.slider-arrow-wrap
+			button.slick-prev.slick-arrow.radius-10
+				+icon({ name:'arrow-button', mod:'icon--stroke' })
+			button.slick-next.slick-arrow.radius-10
+				+icon({ name: 'arrow-button', mod: 'icon--stroke' })
+		.slider-desc.slider-new
+			each item in data.items
+				.slider-new__item
+					.slider-new__img.radius-20
+						if (item.img)
+							+sliderImg(item.img)
+					span.slider-new__name !{ item.name }
+					span.slider-new__desc !{ item.desc }
+	//-
+		+sliderNew({
+			items:[
+				{
+					img:{
+						path: 'assets/images/example/new/new-1.png'
+					},
+					name:'Бетулин с цетрарией',
+					desc:'Irispharma'
+				},
+				{
+					img:{
+						path: 'assets/images/example/new/new-1.png'
+					},
+					name:'Бетулин с цетрарией',
+					desc:'Irispharma'
+				},
+			]
+		})
+
+mixin sliderNews(data)
+	.slider-container
+		.slider-news-button.slider-arrow-wrap
+			button.slick-prev.slick-arrow.radius-10
+				+icon({ name:'arrow-button', mod:'icon--stroke' })
+			button.slick-next.slick-arrow.radius-10
+				+icon({ name: 'arrow-button', mod: 'icon--stroke' })
+		.slider-desc.slider-news
+			each item in data.items
+				.slider-news__item
+					a(href=item.href)
+						.slider-news__img.radius-20
+							if (item.img)
+								+sliderImg(item.img)
+						span.slider-news__data.txt-xs !{ item.data }
+						span.slider-news__preview !{ item.preview }
+
+	//-
+		+sliderNews({
+			items:[
+				{
+					img:{
+						path: 'assets/images/example/new/new-1.png'
+					},
+					data:'19.10.2023',
+					preview:'IRIS принял участие в 21-м Аптечном саммите'
+				},
+				{
+					img:{
+						path: 'assets/images/example/new/new-1.png'
+					},
+					data:'19.10.2023',
+					preview:'Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах'
+				},
+			]
+		})
+
+mixin sliderAdvantage(data)
+	.slider-container.radius-20
+		.slider-desc.slider-advantage
+			each item in data.items
+				.slider-advantage__item
+					a(href=item.href)
+						.slider-advantage__content.radius-20
+							h4.slider-advantage__ttl !{ item.title }
+							span.slider-advantage__preview !{ item.preview }
+							+button({ dopClass: 'button-more button-50 txt-s', buttonText: 'Подробнее', icon:{ name: 'arrow-button', mod: 'icon--stroke' } })
+						.slider-advantage__img.radius-20
+							if (item.img)
+								+sliderImg(item.img)
+	//-
+		+sliderAdvantage({
+			items:[
+				{
+					href:'#',
+					title: 'Заголовок',
+					preview: 'Анонс',
+					img:{
+						path: 'assets/images/example/new/new-1.png'
+					}
+				}
+			]
+
+		})
+
+mixin sliderReviews(data)
+	.slider-container
+		.slider-reviews-button.slider-arrow-wrap
+			button.slick-prev.slick-arrow.radius-10
+				+icon({ name:'arrow-button', mod:'icon--stroke' })
+			button.slick-next.slick-arrow.radius-10
+				+icon({ name: 'arrow-button', mod: 'icon--stroke' })
+		.slider-desc.slider-reviews
+			each item in data.items
+				.slider-reviews__item
+					.slider-reviews__item_top
+						img(src=item.img.path, alt='')
+						.slider-reviews__item_top__content
+							h4 !{ item.name }
+							h4 !{ item.post }
+					.slider-reviews__item_bottom
+						p !{ item.text }

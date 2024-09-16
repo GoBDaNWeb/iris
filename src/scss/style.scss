@@ -1,0 +1,30 @@
+
+/*=== Helpers ====*/
+@import 'helpers/_functions';
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+@import 'helpers/fonts';
+@import 'helpers/normalize';
+@import 'helpers/utilities';
+
+
+/*=== UI-kit ====*/
+
+/*=== All ====*/
+@import 'global/base';
+@import 'global/typography';
+@import 'global/container';
+@import 'global/icons';
+
+/*=== Components ====*/
+@import '../components/**/*.scss';
+@import 'global/sections';
+
+/*=== Pages ====*/
+@import 'pages/**/*';
+
+/*=== Animation ====*/
+@import 'animation/_animations';
+
+
+

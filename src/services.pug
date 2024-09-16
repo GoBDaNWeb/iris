@@ -1,0 +1,576 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Услуги'
+	- var pageClass = 'services-page'
+	- var headerClass = 'header-purple'
+
+block content
+
+	.container 
+		+breadcrumbs({
+			list: [
+				{
+					text: 'Главная',
+					href: 'main.html'
+				},
+
+				{
+					text: 'Услуги Consumed',
+				
+				}
+
+			]
+		})
+
+
+	div.hero-services
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			
+			div.container
+				
+				div.top-main__container
+					.col
+						h1.h1 Компания CONSUMED
+						p.description Consumed - партнёрство ведущих региональных аптечных сетей. Компания была создана в 2015 году в Москве. В Consumed входят только успешные аптечные сети, которые являются лидерами на рынках своего присутствия. Около 3000 аптек уже стали партнёрами компании. 
+						.top-main__bottom
+							a.pdf(href="")
+								span &nbsp;Скачать<br>&nbsp;презентацию
+
+					.col
+						div.top-main__adv
+							+cardType1({
+								dopClassImg:'hide-phone-small',
+								dopClassImgPhone:'hide-desk-phone-small',
+								img:{
+									path:'assets/images/example/top-main/top-main-adv-7.png',
+								},
+								
+								value: 'ТОП-20',
+								desc: 'ТОП-20 брендов БАД по&nbsp;стоимостному обьему продаж в&nbsp;России<br>в&nbsp;марте 2024 года'
+							})
+							+cardType1({
+								dopClassImg:'hide-phone-small',
+								dopClass: 'top-adv-15',
+								img:{
+									path:'assets/images/example/top-main/top-main-adv-6.png',
+								
+								},
+								
+								value: '15',
+								desc: 'Брендов IRIS'
+							})
+							+cardType1({
+								img:{
+									path:'assets/images/example/top-main/top-main-adv-3.png',
+									
+								},
+								value: '4 место',
+								desc: 'В ТОР-20 компаний e-com сегмента российской фармацевтической розницы по итогам 2022 года по&nbsp;версии RNC Pharma'
+							})
+							+cardType1({
+								value: 'R&D',
+								desc: 'Собственная команда<br>R&D'
+							})
+							+cardType1({
+								dopClassImg:'hide-phone-small',
+								dopClassImgPhone:'hide-desk-phone-small',
+								img:{
+									path:'assets/images/example/top-main/top-main-adv-1.png',
+									
+								},
+								
+								value: '2 700+',
+								desc: 'Аптек входят<br>в партнерство IRIS'
+							})
+
+	div.services-consumed
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Услуги Consumed
+		.container 
+			.section-body(data-delighter="start:0.95;end:0.95;")
+				.services-consumed__left
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-1.png", alt="")
+						.services__consumed__point__content
+							h4 Отбираем и выводим на рынок только заведомо успешные препараты 
+							p Нами было успешно выведено 1000 препаратов, таких как: …….
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-2.png", alt="")
+						.services__consumed__point__content
+							h4 Собственная команда «R&D»
+							p Имеем собственную команду разработчиков
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-3.png", alt="")
+						.services__consumed__point__content
+							h4 Регистрация в кратчайшие сроки
+							p Наш опыт и знание требований к регистрации новых препаратов, позволяет зарегистрировать продукт в кратчайшие сроки
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-4.png", alt="")
+						.services__consumed__point__content
+							h4 Полностью упаковываем продукт
+							p Анализируем конкурентов, нишу рынка, ЦА. Разрабатываем «под ключ» необходимые материалы и инструменты  (дизайн, РИМ, сайт)
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-5.png", alt="")
+						.services__consumed__point__content
+							h4 Гарантируем прибыльность проекта
+							p Налаживаем сбыт продукции в b2c сегменте через аптечные сети, маркетплейсы и интернет-магазины
+				.services-consumed__right
+					img(src="assets/images/example/services-consumed/pic.png", alt="")
+					p Consumed - специализируется на разработке и внедрение на рынок фармацевтических инновационных продуктов.
+	div.collaboration
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Интересно сотрудничество
+		.container 
+			.section-body
+				.collaboration__item.collaboration__item-1
+					.collaboration__item__text 
+						h3 Сотрудничество с&nbsp;производителями
+						p Привлекаем к сотрудничеству инвесторов на разных стадиях разработки препаратов и вывода их на рынок.
+						+button({
+							dopClass: 'button-more button-50 txt-s',
+							href: '#',
+							buttonText: 'Подробнее',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						})
+					img(src="assets/images/example/collaboration/i-1.png", alt="")
+
+				.collaboration__item.collaboration__item-2
+					.collaboration__item__text 
+						h3 Розничным сетям
+						p Предлагаем партнерскую программу аптечным сетям и сетевым магазинам для совместной экспансии рынка и увеличение маржинальности.
+						.collaboration__item__btns
+							+button({
+								dopClass: 'button-more button-50 txt-s',
+								href: '#',
+								buttonText: 'Оптовые закупки',
+								icon:{
+									name: 'arrow-button',
+									mod: 'icon--stroke'
+								}
+							})
+							button.primary-btn.button-50.text-s(type="button") Кабинет для аптек-партнеров
+					img(src="assets/images/example/collaboration/i-2.png", alt="")
+
+				.collaboration__item.collaboration__item-3
+					.collaboration__item__text 
+						h3 Специалисты R&D
+						p Мы заинтересованы в развитие своей команды R&D и готовы к сотрудничеству<br>с экспертами в данной области.
+						button.primary-btn.button-50.text-s(type="button") Оставить заявку
+					img(src="assets/images/example/collaboration/i-3.png", alt="")
+
+				.collaboration__item.collaboration__item-4
+					.collaboration__item__text 
+						h3 Инвесторы
+						p Привлекаем к сотрудничеству инвесторов на разных стадиях разработки препаратов и вывода их на рынок.
+						+button({
+							dopClass: 'button-more button-50 txt-s',
+							href: '#',
+							buttonText: 'Подробнее',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						})
+					img(src="assets/images/example/collaboration/i-4.png", alt="")
+	div.team
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Команда R&D
+		.container(data-delighter="start:0.95;end:0.95;")
+			.team__body
+				.team__item 
+					.team__item__content
+						h4 Маргарита Морозова
+						p Доктор медицинских наук
+						p Заведующая лабораторией психофармакологии ФГБНУ НЦПЗ. Опыт работы в области психиатрии 33 года.
+					img(src="assets/images/example/team/avatar-1.png", alt="")
+
+				.team__item 
+					.team__item__content
+						h4 Аллан Бениашвили
+						p Кандидат медицинских наук, врач-психиатр, независимый эксперт нескольких международных фармацевтических компаний. Опыт работы в области психиатрии 25 лет.
+					img(src="assets/images/example/team/avatar-3.png", alt="")
+
+				.team__item 
+					.team__item__content
+						h4 Максим Запольский
+						p Опыт работы в фармакологии более 25 лет. Автор более 20 патентов. Руководитель R&D проектов лаборатории психофармакологии.
+					img(src="assets/images/example/team/avatar-4.png", alt="")
+
+				.team__item 
+					.team__item__content
+						h4 Марина Маевская
+						p Вице-президент Российского общества по изучению печени,
+						p член европейского общества по изучению печени (EASL), врач высшей категории, гепатолог,  гастроэнтеролог, д.м.н, профессор
+					img(src="assets/images/example/team/avatar-5.png", alt="")
+
+				.team__item 
+					.team__item__content
+						h4 Андрей Винаров
+						p д.м.н., член Правления РООУ, профессор Института урологии и репродуктивного здоровья человека ФГАОУ ВО "Первый Московский государственный медицинский университет им. И. М. Сеченова 
+						p Минздрава РФ, г. Москва
+					img(src="assets/images/example/team/avatar-6.png", alt="")
+
+				.team__item 
+					.team__item__content
+						h4 Людмила Алмакаева
+						p профессор заведующая научно-исследовательской лабораторией жидких лекарственных средств для парентерального и перорального применения Национального фармацевтического Университета
+					img(src="assets/images/example/team/avatar-7.png", alt="")
+	div.integration
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container(data-delighter="start:0.95;end:0.95;")
+				h2.h2 Внедрение продукта на&nbsp;рынок
+				p Consumed ежегодно увеличивает географию присутствия на рынке через расширения партнерской сети и развитие направления e-commerce
+
+				.integration__digits
+					.integration__digits__item
+						span 3 000
+						p аптек<br>(розница)
+					.integration__digits__item
+						span 5 849
+						p торговых точек (опт)
+					.integration__digits__item
+						span 8
+						p федеральных округов
+					.integration__digits__item
+						span 53
+						p региона
+					.integration__digits__item
+						span 560+
+						p населенных пунктов
+
+		.container(data-delighter="start:0.95;end:0.95;")
+			.intergration__body 
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-7.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Фармакопейка',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-8.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Твой доктор',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-9.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Здесь аптека',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-1.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Аптечество',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-2.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'На Батуевской',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-6.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Аптека фармани',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-5.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Городская аптека',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-4.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Новая аптека',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-3.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Аптека эконом',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/shah.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Шах аптека',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/minicen.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Аптека миницен',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 	
+	div.spec
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Специализация Consumed
+
+		.container 
+			.spec__body 
+				.spec__item 
+					img(src="assets/images/example/spec/i-1.png", alt="")
+					div 
+						h4 БАД
+						.spec__item__list 
+							h5 Irispharma
+							ul 
+								li гастроэнтерология 
+								li опорно-двигательный аппарат 
+								li витаминно-минеральные комплексы 
+								li поддержка иммунитета 
+								li коррекция веса 
+						.spec__item__list 
+							h5 Статинориз
+							ul 
+								li кардиология 
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Показать ещё',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.spec__item 
+					img(src="assets/images/example/spec/i-1.png", alt="")
+					div 
+						h4 ЛС ОТС
+						.spec__item__list 
+							h5 Реноксилиум
+							ul 
+								li урология 
+						.spec__item__list 
+							h5 Биклитон
+							ul 
+								li гинекология 
+								li гастроэнтеролигия
+
+				.spec__item 
+					img(src="assets/images/example/spec/i-1.png", alt="")
+					div 
+						h4 ЛС RX
+						.spec__item__list 
+							h5 Меклофеноксат
+							ul 
+								li невролгия 
+						.spec__item__list 
+							h5 Холестирамин
+							ul 
+								li гастроэнтеролигия 
+						.spec__item__list 
+							h5 Типресс
+							ul 
+								li аллергия 
+
+
+				.spec__item 
+					img(src="assets/images/example/spec/i-1.png", alt="")
+					div 
+						h4 Лечебная косметика
+						.spec__item__list 
+							h5 Спрей для интимной гигиены
+							ul 
+								li урология, гинекология 
+							
+	
+	
+	
+	section.section-news
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Новости
+				
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				
+				+sliderNews({
+					items:[
+						{
+							href: '#',
+							img:{
+								path: 'assets/images/example/news/news-preview-1.png'
+							},
+							data:'19.10.2023',
+							preview:'IRIS принял участие в 21-м Аптечном саммите'
+						},
+						{
+							href: '#',
+							img:{
+								path: 'assets/images/example/news/news-preview-2.png'
+							},
+							data:'19.10.2023',
+							preview:'Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах. Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах'
+						},
+						{
+							href: '#',
+							img:{
+								path: 'assets/images/example/news/news-preview-3.png'
+							},
+							data:'19.10.2023',
+							preview:'IRIS принял участие в 21-м Аптечном саммите'
+						},
+						{
+							href: '#',
+							img:{
+								path: 'assets/images/example/news/news-preview-1.png'
+							},
+							data:'19.10.2023',
+							preview:'Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах'
+						},
+					]
+				})
+
+	section.contact 
+		.container 
+			.contact__content 
+				.contact__left 
+					h2 Приглашаем к&nbsp;сотрудничеству
+					p Свяжитесь с нами или оставьте контакты - мы перезвоним в течение часа!
+					.contact__left__actions 
+						a.download.pdf(href="#")
+							//- +icon({
+							//- 	name: 'pdf',
+							//- 	mod: 'icon--stroke'
+							//- })
+							span &nbsp;Скачать<br>&nbsp;презентацию
+						.contact__manager
+							img.avatar(src="assets/images/example/team/avatar-2.png", alt="")
+							.contact__manager__content 
+								h6 Гаршев Алексей
+								span Руководитель отдела продаж
+								.contact__row 
+									img(src="assets/images/icons/tel.svg", alt="")
+									a(href="tel:8 800 123-45-67") 8 800 123-45-67
+								.contact__row 
+									img(src="assets/images/icons/clock.svg", alt="")
+									p 09:00 - 18:00
+								.contact__row 
+									img(src="assets/images/icons/mail.svg", alt="")
+									a(href="mailto:info@consu-med.ru") info@consu-med.ru
+
+				.contact__right
+					form.contact__form
+						.contact__form__fields
+							input(type="text", placeholder="Ваше имя")
+							input(type="text", placeholder="Компания")
+							input(type="text", placeholder="Телефон", id="phone-mask")
+							input(type="text", placeholder="E-mail")
+							textarea(placeholder="Сообщение", resize="none")
+						label.attach
+							img(src="assets/images/icons/attach.svg", alt="")
+							span Прикрепить файл
+							input(type="file")
+						.contact__form__bottom 
+							button.primary-btn(type="submit") Отправить
+							p Заполняя данную форму вы соглашаетесь с политикой конфиденциальности сайта. <br>Сайт защищен Google recaptcha. 
+								a(href="") Политика конфиденциальности
+								span &nbsp;и&nbsp;
+								a(href="") условия использования.
+

@@ -1,0 +1,433 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Аптечным сетям'
+	- var pageClass = 'pharmacy-page'
+	- var headerClass = 'header-purple'
+
+block content
+	.container
+		+breadcrumbs({ list: [ { text: 'Главная', href: 'main.html' }, { text: 'Аптечным сетям', } ] })
+
+	.hero-pharmacy.hero-services
+		.section-body(data-delighter='start:0.95;end:0.95;')
+			.container
+				.top-main__container
+					.col
+						h1.h1 Развитие и рост на&nbsp;силе&nbsp;партнерства
+						h1.h1.mob Развитие и рост на силе партнерства
+
+						.hero-manufactures__offer__bottom
+							button.primary-btn(type='button') Заявка на сотрудничество
+							a.pdf(href='') 
+								span &nbsp;Скачать<br>&nbsp;презентацию
+
+					.col
+						.top-main__adv
+							+cardType1({ dopClassImg:'hide-phone-small', dopClassImgPhone:'hide-desk-phone-small', digit1: '8', digit1Text: 'Федеральных округов', digit2: '53', digit2Text: 'Объекта', digit3: '560+', digit3Text: 'Населенных пунктов', img:{ path:'assets/images/example/hero-pharmacy/i-1.png', }, value: '2700', desc: 'Аптек' })
+							+cardType1({ dopClassImg:'hide-phone-small', dopClass: 'top-adv-15', img:{ path:'assets/images/example/hero-pic-2.png', }, value: '4,1%', desc: 'Доля IRIS<br>на коммерческом сегменте' })
+							+cardType1({ img:{ path:'assets/images/example/top-main/top-main-adv-3.png', }, value: '7 место', desc: 'Рейтинг аптечных сетей по итогам I полугодия 2023 года по&nbsp;версии DSM' })
+							+cardType1({ dopClassImg:'hide-phone-small', dopClassImgPhone:'hide-desk-phone-small', img:{ path:'assets/images/example/hero-pharmacy/i-2.png', }, value: 'В ТОП-10', desc: 'На российском розничном фармацевтическом<br>E-commerce рынке' })
+
+	.services-consumed
+		.section-header(data-delighter='start:0.95;end:0.95;')
+			.container
+				h2.h2 Аптечным сетям IRIS предлагает
+		.container
+			.section-body(data-delighter='start:0.95;end:0.95;')
+				.services-consumed__left
+					h3 Экспертность
+					.services__consumed__point
+						img(src='assets/images/example/services-consumed/i-4.png', alt='')
+						.services__consumed__point__content
+							h4 Достаточные консолидированные объёмы закупок для ввода в ассортимент ВМП.
+							p Преимущественно ЛС СТМ. Объемы каждой из сетей, входящих в IRIS, по отдельности не достаточны для сотрудничества с производственными площадками.
+					.services__consumed__point
+						img(src='assets/images/example/services-consumed/i-5.png', alt='')
+						.services__consumed__point__content
+							h4 Высокий уровень переговоров и доступ к бюджетам самого высокого порядка.
+							p IRIS проводит переговоры с лицами, принимающими решения на самом высоком уровне: генеральные директора, комммерческие директора, штаб-квартиры. И получает бюджеты производителей на уровне страны, а не на уровне конкретного региона.
+
+					.services__consumed__point
+						img(src='assets/images/example/services-consumed/i-2.png', alt='')
+						.services__consumed__point__content
+							h4 Доступ к лучшим практикам ведения аптечного бизнеса.
+							p Как внутри IRIS, так и привлечение внешних источников, ресурсов и экспертизы, которые каждая из сетей по отдельности не может себе позволить.
+
+				.services-consumed__right
+					img(
+						src='assets/images/example/services-consumed/pharmacy-pic.png',
+						alt=''
+					)
+					p IRIS - фармацевтическая экосистема, объединяющая в себе: компетенции поиска, разработки, регистрации и вывода на рынок инновационных продуктов.
+
+	.integration.integration2
+		.section-header(data-delighter='start:0.95;end:0.95;')
+			.container
+				h2.h2 Аптечные сети - партнеры
+
+		.container
+			.intergration__body
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-7.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Фармакопейка', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-8.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Твой доктор', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-9.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Здесь аптека', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-1.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Аптечество', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-2.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'На Батуевской', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-6.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Аптека фармани', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-5.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Городская аптека', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-4.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Новая аптека', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/partners-logo-3.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Аптека эконом', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/shah.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Шах аптека', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+				.integration__item
+					.intergration__item__pic
+						a(href='#') 
+						img(src='assets/images/example/partners/minicen.png', alt='')
+					a(href='#')
+						+button({ dopClass: 'button-go ', buttonText: 'Аптека миницен', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+
+	.expert
+		.container
+			h2 Экспертиза IRIS
+
+			.expert__content.accordion
+				.accordion-item.expert__item
+					button.accordion-title(type='button') 
+						.expert__item__arrow
+							+icon({ name: 'arrow-button', mod: 'icon--stroke' })
+						span Компетенции в&nbsp;IRIS
+					.collapse.accordion-body
+						.expert__item__left
+							h5 Категорийный менеджмент
+							ul
+								li Система принятия решений по вводу/выводу позиций, наполнению категорий
+								li Категорийное дерево и справочники товаров
+								li Разработка категорийных стратегий/тактик
+								li Планирование закупок и продаж
+								li Система KPIs для оценки эффективности управления ассортиментом категории
+								li Организационная структура отдела управления ассортиментом
+						.expert__item__right
+							h5 Обучающий центр IRIS – доступ к обучению онлайн, с любого устройства
+							ul
+								li Обучение ассортименту СТМ и УСТМ: продуктовые презентации, тестирование
+								li Обучение техникам продаж ВМП (предложение/замена/комплексные продажи/прикассовые продажи): интерактивные курсы, диалоговые тренажеры, интеллект карты
+								li Обучение заведующих аптек: управление аптекой, контроль показателей, управленческие компетенции, наставничество
+				.accordion-item.expert__item
+					button.accordion-title(type='button') 
+						.expert__item__arrow
+							+icon({ name: 'arrow-button', mod: 'icon--stroke' })
+						span Функционал IRIS
+					.collapse.accordion-body
+						.expert__item__left
+							h5 Контракты
+							ul
+								li Проведение переговоров с производителями
+								li Оценка и согласование условий с партнерами ИРИС, в том числе УСТМ
+								li Контроль исполнения взятых обязательств партнерами ИРИС и производителями
+								li Аналитика и рекомендации по работе с контрактами
+								li Справедливое распределение маркетинговых бюджетов между партнерами ИРИС
+						.expert__item__right
+							h5 СТМ
+							ul
+								li Разработка стратегии управления портфелем СТМ
+								li Разработка продуктов (Состав, торговая марка, преимущества, дизайн)
+								li Поиск контрактной площадки и согласование условий производства и поставки товара, согласование условий договора
+								li Согласование объемов договора и первой поставки с сетями.
+								li Контроль производства первой партии продукции, начала работы по договору поставки СЕТЬ-ПРОИЗВОДИТЕЛЬ
+								li Участие при возникновении любых вопросов по договору поставки СТМ (цены, дефектура, излишки, изменение дизайна и т.д.)
+				.accordion-item.expert__item
+					button.accordion-title(type='button') 
+						.expert__item__arrow
+							+icon({ name: 'arrow-button', mod: 'icon--stroke' })
+						span Экспертность IRIS в&nbsp;аптечных сетях
+					.collapse.accordion-body
+						.expert__item__left
+							h5 Управление продажами
+							ul
+								li Мотивация персонала отдела продаж, аптек и офиса
+								li Система регулярной отчетности: KPIs по всей структуре продаж и офисным сотрудникам
+								li Система контроля управления продажами, проведения активностей, обучения, исполнения стандартов обслуживания
+
+						.expert__item__right
+							h5 Логистика
+							h5 Ценообразование
+							h5 E-commerce
+
+	.benefits
+		.container
+			.benefits__inner
+				.benefits__left
+					h2 Выгоды для Аптечных сетей
+					p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов
+
+					.benefits__advantages
+						h3 Преимущества СТМ IRIS
+						ul
+							li доходность выше средней по категории (общая маржинальность СТМ– 62%)
+							li Зонтичные бренды — первостольнику легко запомнить
+							li Бренды уже известны на рынке, на них есть спрос, их знают клиенты и врачи
+							li Сбалансированный портфель — СТМ во всех доступных для СМТ категориях
+							li Адекватное розничное ценообразование (понятное для клиентов, розничные цены не завышены относительно конкурентов)
+							li Отсутствие планов по выборке СТМ и обязательного наличия всего ассортимента
+							li Рекомендации по продвижению СТМ - обучающие материалы, выкладка, работа с ассортиментом категории; программа федерального продвижения СТМ для конечных потребителей на уровне IRIS - сайты, SMM, работа с KOL и др
+				img(src='assets/images/example/benefit-pic.png', alt='')
+
+			.benefits__advantages-tablet.benefits__advantages
+				h3 Преимущества СТМ IRIS
+				.benefits__advantages-tablet__lists
+					ul
+						li доходность выше средней по категории (общая маржинальность СТМ– 62%)
+						li Зонтичные бренды — первостольнику легко запомнить
+						li Бренды уже известны на рынке, на них есть спрос, их знают клиенты и врачи
+						li Сбалансированный портфель — СТМ во всех доступных для СМТ категориях
+						li Адекватное розничное ценообразование (понятное для клиентов, розничные цены не завышены относительно конкурентов)
+					ul
+						li Отсутствие планов по выборке СТМ и обязательного наличия всего ассортимента
+						li Рекомендации по продвижению СТМ - обучающие материалы, выкладка, работа с ассортиментом категории; программа федерального продвижения СТМ для конечных потребителей на уровне IRIS - сайты, SMM, работа с KOL и др
+
+	.income
+		.container
+			.income__block
+				h3 Дополнительный доход от вступления в IRIS (СТМ+Контракты)
+				.income__cards
+					.income__card
+						p.income__card__heading Выручка, млн. руб
+							span Валовая прибыль (фронт + бэк) деленая на выручку
+						.income__card__digits
+							span 19 000
+							p текущая
+						.income__card__digits
+							span 19 000
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Фронт-маржа
+							span Валовая прибыль (фронт + бэк) деленая на выручку
+						.income__card__digits
+							span 18%
+							p текущая
+						.income__card__digits
+							span 23%
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Бэк-маржа
+							span Валовая прибыль (фронт + бэк) деленая на выручку
+						.income__card__digits
+							span 4%
+							p текущая
+						.income__card__digits
+							span 7%
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Тотал-маржа
+							span Тотал-маржа
+						.income__card__digits
+							span 22%
+							p текущая
+						.income__card__digits
+							span 30%
+							p после вступления в IRIS
+
+				.income__result
+					p Плюсы от вступления в ИРИС (ИТОГО):
+					span 1 520 000 000 ₽
+			.income__block
+				h3 Дополнительный доход только от СТМ IRIS
+				.income__cards
+					.income__card
+						p.income__card__heading Выручка, млн. руб
+							span Валовая прибыль (фронт + бэк) деленая на выручку
+						.income__card__digits
+							span 19 000
+							p текущая
+						.income__card__digits
+							span 19 000
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Доля СТМ
+							span Доля СТМ
+						.income__card__digits
+							span 5%
+							p текущая
+						.income__card__digits
+							span 18%
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Доля УСТМ
+							span Доля УСТМ
+						.income__card__digits
+							span 8%
+							p текущая
+						.income__card__digits
+							span 10%
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Доля ВТМ
+							span Тотал-маржа
+						.income__card__digits
+							span 13%
+							p текущая
+						.income__card__digits
+							span 28%
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Тотал маржа неВМТ
+							span Валовая прибыль (фронт + бэк) деленая на выручку
+						.income__card__digits
+							span 20%
+							p текущая
+						.income__card__digits
+							span 20%
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Тотал маржа СТМ
+							span Доля СТМ
+						.income__card__digits
+							span 60%
+							p текущая
+						.income__card__digits
+							span 60%
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Тотал маржа УСТМ
+							span Доля УСТМ
+						.income__card__digits
+							span 45%
+							p текущая
+						.income__card__digits
+							span 45%
+							p после вступления в IRIS
+					.income-hidden
+
+					.income__card
+						p.income__card__heading Доп. доход от СТМ
+							span Тотал-маржа
+						.income__card__digits
+							span 380
+							p текущая
+						.income__card__digits
+							span 1 368
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Доп. доход от ВМТ
+							span Валовая прибыль (фронт + бэк) деленая на выручку
+						.income__card__digits
+							span 380
+							p текущая
+						.income__card__digits
+							span 475
+							p после вступления в IRIS
+
+					.income__card
+						p.income__card__heading Итого доп. доход
+							span Итого доп. доход
+						.income__card__digits
+							span 768
+							p текущая
+						.income__card__digits
+							span 1 843
+							p после вступления в IRIS
+
+				.income__result
+					p Плюсы от вступления в ИРИС (ИТОГО):
+					span 1 083 000 000 ₽
+
+	section.contact.contact2
+		.container
+			.contact__content
+				.contact__left
+					h2 Готовы к сотрудничеству!
+					p Наш представитель свяжется с Вами в течение дня и ответит на все интересующие вопросы
+					.contact__left__actions
+						a.download.pdf(href='#')
+							span &nbsp;Скачать<br>&nbsp;презентацию
+
+				.contact__right
+					form.contact__form
+						.contact__form__fields
+							input(type='text', placeholder='Ваше имя')
+							input(type='text', placeholder='Компания')
+							input(type='text', placeholder='Телефон')
+							input(type='text', placeholder='E-mail')
+							textarea(placeholder='Сообщение', resize='none')
+						label.attach
+							img(src='assets/images/icons/attach.svg', alt='')
+							span Прикрепить файл
+							input(type='file')
+						.contact__form__bottom
+							button.primary-btn(type='submit') Отправить
+							p Заполняя данную форму вы соглашаетесь с политикой конфиденциальности сайта. <br>Сайт защищен Google recaptcha.
+								|
+								a(href='') Политика конфиденциальности
+								span &nbsp;и&nbsp;
+								a(href='') условия использования.

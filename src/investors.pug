@@ -1,0 +1,264 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Инвесторам'
+	- var pageClass = 'investors-page'
+	- var headerClass = 'header-purple'
+
+block content
+	.container
+		+breadcrumbs({ list: [ { text: 'Главная', href: 'main.html' }, { text: 'Инвесторам', } ] })
+	.investors__hero
+		.container
+			.investors__hero__inner
+				.investors__hero__inner_left
+					h1 IRIS - предлагает инвесторам партнерство на любом этапе разработки препарата
+					.btns
+						button.primary-btn(type='button') Заявка на сотрудничество
+						a.pdf(href='') 
+							span &nbsp;Скачать &nbsp;презентацию
+				.investors__hero__inner_right
+					+cardType1({dopClass: 'top-adv-15', dopClassImg: 'hide-phone-small', dopClassImgPhone:'hide-desk-phone-small', imgPhone: {path:'assets/images/example/investors/card1-mob.png',}, img:{ path:'assets/images/example/investors/card1.png', }, value: '15', desc: 'Брендов IRIS' })
+					+cardType1({ dopClassImg:'hide-phone-small', dopClass: 'top-adv-15', value: '1 000+', desc: 'SKU' })
+					+cardType1({ dopClass: 'top-adv-15',dopClassImg: 'hide-phone-small', dopClassImgPhone:'hide-desk-phone-small',imgPhone: {path:'assets/images/example/investors/card2-mob.png',}, img:{ path:'assets/images/example/investors/card3.png', }, value: 'Consumed', desc: 'В состав IRIS входит <br> производственная компания <br> CONSUMED' })
+	.investors__attraction
+		.container
+			.investors__attraction__inner
+				h2 Привлечение инвесторов
+				p IRIS - привлекает инвесторов как на полноценное создание СТМ, так и на следующих этапах
+				.investors__attraction__list
+					.investors__attraction__item
+						img(src='assets/images/example/investors/attr1.png', alt='')
+						.investors__attraction__item_content
+							h5 Кобрендинг
+							ul
+								li IRIS, при развитии своих продуктов в категориях производителя, использует по лицензии известные бренды производителя.
+								li В дальнейшем производитель выкупает у RIS интеллектуальную собственность на эти продукты (РУ, СГР, патенты).
+					.investors__attraction__item
+						img(src='assets/images/example/investors/attr2.png', alt='')
+						.investors__attraction__item_content
+							h5 Совместное владение ТЗ
+							ul
+								li Совместное владение в определенных долях, что предусматривает совместное вложение как в исследования, так и в продвижение соответственно долевому владению.
+								li Возможен последующий выкуп доли одной из сторон.
+					.investors__attraction__item
+						img(src='assets/images/example/investors/attr3.png', alt='')
+						.investors__attraction__item_content
+							h5 Совместное продвижение
+							ul
+								li ТЗ принадлежит IRIS, продвижение совместное, каждый зарабатывает в своей части продаж.
+								li Возможен дальнейший выкуп ТЗ и РУ производителем.
+					.investors__attraction__item
+						img(src='assets/images/example/investors/attr4.png', alt='')
+						.investors__attraction__item_content
+							h5 Продажа ТЗ и интеллектуальной собственности
+							ul
+								li Продвижение и продажа продукта со стороны IRIS до определенного уровня продаж, доли рынка и/или дистрибьюции на территории РФ.
+								li Также IRIS может предложить текущие продукты, находящиеся в промоции и продаже.
+					.investors__attraction__item
+						img(src='assets/images/example/investors/attr5.png', alt='')
+						.investors__attraction__item_content
+							h5 Разработка инновационного продукта
+							ul
+								li По заказу производителя IRIS (вместе с R&D) разрабатывает инновационные продукты именно в том направлении, которое интересно производителю.
+	.investors__products
+		.container
+			.investors__products__inner
+				h2 Продукты для совместной работы
+				p IRIS - привлекает инвесторов как на полноценное создание СТМ, так и на следующих этапах
+				.investors__products__list
+					.investors__products__item
+						img(src='assets/images/example/investors/product1.png', alt='')
+						.investors__products__item_content
+							h4 БАД
+							h5 Irispharma
+							ul
+								li гастроэнтерология
+								li опорно-двигательный аппарат
+								li витаминно-минеральные комплексы
+								li поддержка иммунитета
+								li коррекция веса
+							h5 Статинориз
+							ul
+								li кардиология
+							button.show-btn Показать ещё
+					.investors__products__item
+						img(src='assets/images/example/investors/product2.png', alt='')
+						.investors__products__item_content
+							h4 ЛС ОТС
+							h5 Реноксилиум
+							ul
+								li урология
+							h5 Биклитон
+							ul
+								li гинекология
+								li гастроэнтеролигия
+					.investors__products__item
+						img(src='assets/images/example/investors/product3.png', alt='')
+						.investors__products__item_content
+							h4 ЛС RX
+							h5 Меклофеноксат
+							ul
+								li неврология
+							h5 Холестирамин
+							ul
+								li гастроэнтеролигия
+							h5 Типресс
+							ul
+								li аллергия
+					.investors__products__item
+						img(src='assets/images/example/investors/product4.png', alt='')
+						.investors__products__item_content
+							h4 Лечебная косметика
+							h5 Спрей для интимной гигиены
+							ul
+								li урология, гинекология
+
+	.investors__about
+		.container
+			.investors__about__inner
+				h2 Почему с IRIS?
+				p IRIS фармацевтическая экосистема включающая в себя 2 экспертные области
+				.investors__about__items
+					.investors__about__item
+						img(src='assets/images/example/investors/about1.png', alt='')
+						.investors__about__item__content
+							h3 Производство <br> фармацевтических препаратов
+							p Производство фармацевтических препаратов. В состав IRIS входит компания ООО “Консумед”, занимающаяся разработкой и выводом на рынок инновационных фармацевтических препаратов.
+					.investors__about__item
+						img(src='assets/images/example/investors/about2.png', alt='')
+						.investors__about__item__content
+							h3 Commerce и E-commerce
+							p В состав IRIS входит партнерство 11 Аптечных сетей и 3000+ аптек по всей России. IRIS осуществляет продажу продукции как в сетевых магазинах и аптеках, так и в интернет-магазинах партнеров, на ведущих маркетплейсах России и СНГ (OZON, WB, Яндекс маркет).
+	.investors__assortment
+		.container
+			.investors__assortment__inner
+				.investors__assortment_top
+					h2 Ассортимент IRIS — собственные бренды и SKU
+					.digits
+						.digit
+							h3 1000+
+							p SKU СТМ
+						.digit
+							h3 15
+							p Брендов
+				.investors__assortment_bottom
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-1.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-2.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-3.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-4.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-5.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-6.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-7.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-8.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-9.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-10.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-11.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-12.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-13.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-14.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+	section.contact.contact2
+		.container
+			.contact__content
+				.contact__left
+					h2 Приглашаем <br>к сотрудничеству
+					p Свяжитесь с нами или оставьте контакты - мы перезвоним в течение часа!
+					.contact__left__actions
+						a.download.pdf(href='#')
+							span &nbsp;Скачать<br>&nbsp;презентацию
+						.person
+							img(src='assets/images/example/investors/person.png', alt='')
+							.person__content
+								p Гаршев Алексей
+								span Руководитель отдела продаж
+								ul
+									li
+										a.text(href='tel:8 800 123-45-67')
+											img(src='assets/images/example/investors/phone.png', alt='')
+											p 8 800 123-45-67
+									li
+										.text
+											img(src='assets/images/example/investors/clock.png', alt='')
+											p 09:00 - 18:00
+									li
+										a.text(href='mailto:info@consu-med.ru')
+											img(src='assets/images/example/investors/email.png', alt='')
+											p info@consu-med.ru
+
+				.contact__right
+					form.contact__form
+						.contact__form__fields
+							input(type='text', placeholder='Ваше имя')
+							input(type='text', placeholder='Компания')
+							input(type='text', placeholder='Телефон')
+							input(type='text', placeholder='E-mail')
+							textarea(placeholder='Сообщение', resize='none')
+						label.attach
+							img(src='assets/images/icons/attach.svg', alt='')
+							span Прикрепить файл
+							input(type='file')
+						.contact__form__bottom
+							button.primary-btn(type='submit') Отправить
+							p Заполняя данную форму вы соглашаетесь с политикой конфиденциальности сайта. <br>Сайт защищен Google recaptcha.
+								|
+								a(href='') Политика конфиденциальности
+								span &nbsp;и&nbsp;
+								a(href='') условия использования.

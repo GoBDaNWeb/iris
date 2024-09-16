@@ -1,0 +1,86 @@
+// Color 
+//$color-background-1: #EAF1F5;
+//$color-background-2: #80C8E8;
+//$color-background-3: #353741;
+$grey-back: #F5F6F9;
+$violet-back: #F1F0FF;
+$blue-back: #E8F1FF;
+$green-back: #DEF2F3;
+
+$color-white: #FFFFFF;
+$color-black: #393E4D;
+
+
+
+
+$color-violet: #6E67D2;
+$color-violet-dark: #5148C6;
+$color-grey:#BBC1D1;
+$grey-lines: #E6E9F7;
+$color-error: #EE446D;
+
+//indent
+$indent-section: 128px;
+$indent-section-tablet: 96px;
+
+
+$color-transparent: transparent;
+
+//$themeColor: 'base';
+
+//animation
+$an-tipe-1: linear;
+$an-time-1: .3s;
+
+
+// fonts 
+$font-sans-serif: -apple-system,
+	BlinkMacSystemFont,
+	"Helvetica Neue",
+	"Helvetica",
+	Helvetica,
+	Arial,
+	sans-serif,
+	"Apple Color Emoji",
+	"Segoe UI Emoji",
+	"Segoe UI Symbol",
+	"Noto Color Emoji";
+$Onest-Regular: 'Onest-Regular', $font-sans-serif; //400
+$Onest-Medium: 'Onest-Medium', $font-sans-serif; //500
+
+
+
+$font-ManropeBold: 'Manrope-Bold', $font-sans-serif;
+$font-ManropeExtraBold: 'Manrope-ExtraBold', $font-sans-serif;
+//$font-inter: 'Inter', $font-sans-serif;
+//$font-myriad: 'MyriadPro', $font-sans-serif;
+
+$font-base: $Onest-Regular;
+$font-base-size: 18px;
+$font-base-lineheight: 130%;
+
+$font-weight-200: 200;
+$font-weight-300: 300;
+$font-base-weight: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-weight-800: 800;
+
+
+// transition
+$transition: all 0.25s ease;
+
+/* Breakpoints */
+$breakpoints: (
+  'phone-minimum': 319px,
+  'phone-tiny': 330px,
+  'phone-small': 479px,
+  'phone': 767px,
+  'tablet': 1023px,
+  'desktop-tiny': 1199px,
+  'desktop-small': 1439px,
+  'desktop-medium': 1599px,
+  'desktop-default': 1919px,
+);
+

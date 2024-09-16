@@ -1,0 +1,13 @@
+
+textarea{
+	resize: none;
+	&.input {
+		padding-bottom: rem(22);
+		line-height: 1.3;
+		overflow: hidden;
+		&::placeholder {
+			text-align: start;
+		}
+	}
+	
+}

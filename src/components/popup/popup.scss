@@ -1,0 +1,148 @@
+//@import '../../scss/helpers/_variables';
+//@import '../../scss/helpers/_mixins';
+
+.mfp-move-horizontal .mfp-with-anim {
+	//opacity: 0;
+	transition: all 0.3s;
+	transform: translateX(300%);
+}
+
+.mfp-move-horizontal.mfp-bg {
+	//opacity: 0;
+	transition: all 0.3s;
+}
+
+.mfp-move-horizontal.mfp-ready .mfp-with-anim {
+	//opacity: 1;
+	transform: translateX(0);
+}
+
+.mfp-move-horizontal.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.mfp-move-horizontal.mfp-removing .mfp-with-anim {
+	transform: translateX(300%);
+	//opacity: 0;
+}
+
+.mfp-move-horizontal.mfp-removing.mfp-bg {
+	//opacity: 0;
+}
+
+
+//цвет фона
+.mfp-bg {
+	background: #6e67d280;
+}
+//размытие фона
+.mfp-wrap ~ * {
+	filter: blur(7.5px);
+}
+
+.popup {
+	position: fixed;
+	right: 0;
+	top: 0;
+	margin: 0 auto;
+	margin-right: 0;
+	min-height: 100vh;
+	border-radius: 20px 0px 0px 20px;
+	background: #fff;
+	z-index: 3;
+	@include mq('desktop-tiny') { //max-width 1440px
+		padding: 110px 70px;
+	}
+	@include mq('tablet') { //max-width 1024px  (мобильное меню)
+		padding: 85px 35px;
+	}
+	@include mq('phone') {
+		width: 100%;
+		padding: 50px 20px;
+	}
+	&__wrap {
+		padding: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+		overflow-y: auto;
+		&::-webkit-scrollbar {
+			width: 5px;
+			height: 10px;
+			transition: 125ms;
+			background-color: $grey-lines;
+			cursor: pointer !important;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $color-violet;
+			border-radius: 9em;
+			box-shadow: inset 1px 1px 10px $color-violet;
+			cursor: pointer !important;
+			transition: 125ms;
+		}
+	}
+	@-moz-document url-prefix() {
+		.popup__wrap {
+			scrollbar-width: thin;
+			scrollbar-color: $color-violet $grey-lines;
+		}
+	}
+	.h2 {
+		display: block;
+		margin-bottom: 48px;
+	}
+	.popup-modal-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		height: 40px;
+		width: 40px;
+		border: 1px solid $grey-lines;
+		&:hover {
+			border-color: $color-violet-dark;
+			.icon-svg {
+				color: $color-violet-dark;
+			}
+		}
+		.icon-svg {
+			color: $color-black;
+		}
+		@include mq('desktop-tiny') {
+			right:70px;
+		}
+		@include mq('tablet') { //max-width 1200px (начинается версия таблет)
+			right: 35px;
+			top: 20px;
+		}
+		@include mq('phone') {
+			right: 20px;
+		}
+	}
+}
+
+#popup-call {
+	max-width: 580px;
+}
+
+#popup-thank {
+	max-width: 580px;
+}
+
+.content-thank {
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

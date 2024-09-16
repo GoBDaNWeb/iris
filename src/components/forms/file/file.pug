@@ -1,0 +1,32 @@
+mixin file(data)
+
+	- attr = data.attr || {'data-file': ''}
+
+	div(class='form-field')
+		input(type='file'  hidden='hidden' class='input-file')
+		span(type='button' class='button-file button button-gold txt-green') !{data.buttonTxt}
+			<svg fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><rect x="1.5" y="1" rx="26.5" stroke="url(#a)" stroke-width="2"/><defs><linearGradient id="a" x1="2" y1="29.7" x2="230.5" y2="29.7" gradientUnits="userSpaceOnUse"><stop stop-color="#A9824F"/><stop offset=".212" stop-color="#FFDAAA"/><stop offset=".501" stop-color="#A9824F"/><stop offset=".659" stop-color="#F2BF7B"/><stop offset="1" stop-color="#A9824F"/></linearGradient></defs></svg>
+		span(class='file-text' data-text=data.txtReset) !{data.txtReset}
+		//-span( class='reset-file') !{data.cancelTxt}
+
+
+	
+
+//-
+	+file({
+		buttonTxt: 'загрузить файл-1',
+		txtReset: 'файл не выбран',
+		cancelTxt: 'отмена'
+	})
+
+mixin filePartners(data)
+
+	- attr = data.attr || {'data-file': ''}
+
+	div(class='form-field')
+		input(type='file'  hidden='hidden' class='input-file')
+		div(type='button' class='button-file button ') 
+			span(class='button-text') !{data.buttonTxt}
+			span(class='file-text' data-text=data.txtReset) !{data.txtReset}
+
+

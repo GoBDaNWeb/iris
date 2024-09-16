@@ -1,0 +1,24 @@
+mixin textarea(data)
+	//- атрибуты
+	- attr = data.attr || ''
+	- fieldName = data.fieldName
+
+	div(class='form-field' data=data.classRow)
+		textarea(
+			class='form__field input'
+			id= data.id
+			name=typeof data.name === "undefined" ? data.type: data.name
+			value=typeof data.value === "undefined" ? "" : data.value
+			placeholder=typeof data.placeholder === "undefined" ? "" : data.placeholder)&attributes(attr)!=data.value
+		div(class='form-message-fild' )
+		if(data.label)
+			label(for=data.label.labelFor class="input__label")= data.label.labelText
+		//-div(class=`form-message-fild form-message--${fieldName}`)
+
+	//-
+		div(class=`select`)
+			div(class=`select__container`)
+			select(class=`select__item`)&attributes(attr)!=data.text
+				each option in data.option
+					option(class=`select__option`)&attributes(option.attr)!=option.text
+	

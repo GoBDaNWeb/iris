@@ -1,0 +1,143 @@
+a {
+	&.button {
+		&:hover {
+			//opacity: 1;
+		}
+	}
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	border-radius: 10px;
+	transition: $transition;
+	cursor: pointer;
+
+}
+
+.button-40 {
+	height: 40px;
+}
+.button-50 {
+	height: 50px;
+}
+.button-65 {
+	height: 65px;
+}
+
+
+.button-border {
+	color: $color-violet;
+	border: 1px solid $color-violet;
+	&:hover {
+		border-color: $color-violet-dark;
+		background: $color-violet-dark;
+		color: $color-white;
+	}
+	.icon-svg {
+		color: $color-violet;
+	}
+	&:hover {
+		.icon-svg {
+			color: $color-white;
+		}
+	}
+}
+
+.button-more {
+	column-gap: 20px;
+	padding: 0 20px;
+	border: 1px solid rgba(110, 103, 210, 0.4);
+	color: $color-violet;
+	transition: $transition;
+	&:hover {
+		border-color: $color-violet-dark;
+		color: $color-violet-dark;
+		span {
+			&::after {
+				background: $color-violet-dark;
+			}
+		}
+		.icon-svg {
+			color: $color-violet-dark;
+		}
+	}
+	span {
+		position: relative;
+		padding-right: 20px;
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: -4px;
+			display: block;
+			height: 30px;
+			width: 1px;
+			background: rgba(110, 103, 210, 0.4);
+		}
+	}
+	.icon-svg {
+		color: $color-violet;
+	}
+}
+
+.button-go {
+	column-gap: 20px;
+	border-radius: 0;
+	color: $color-violet;
+	@include mq('desktop-tiny') {
+		font-size: 14px;
+		line-height: 130%;
+	}
+	&:hover {
+		color: $color-violet-dark;
+	}
+	.icon-svg {
+		order: -1;
+		color: $color-violet;
+	}
+	&:hover {
+		.icon-svg {
+			color: $color-violet-dark;
+		}
+	}
+}
+
+.button-point {
+	padding: 0 15px;
+	column-gap: 10px;
+	//font-size: 14px;
+	.icon-svg {
+		order: -1;
+	}
+}
+
+.button-search, .button-lk {
+	height: 40px;
+	width: 40px;
+	border: 1px solid $grey-lines;
+	flex-shrink: 0;
+	&:hover {
+		background: $color-violet-dark;
+		border-color: $color-violet-dark;
+		.icon-svg {
+			color: $color-white;
+		}
+	}
+	.icon-svg {
+		color: $color-black;
+	}
+	
+}
+
+.button-violet {
+	padding: 0 35px;
+	color: $color-white;
+	background: $color-violet;
+	&:hover {
+		background: $color-violet-dark;
+	}
+}
+

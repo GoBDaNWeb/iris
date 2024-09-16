@@ -1,0 +1,64 @@
+mixin checkboxBase(data)
+	- атрибуты
+	- attr = data.attr || ''
+
+	- fieldName = data.fieldName
+
+	div(class="form-field" data=data.classRow)
+		if (data.title)
+			span(class="field-title")= data.title
+		each item in data.listCheckbox
+			
+			div(class="check__wrap")
+				
+
+				input(
+					type="checkbox" 
+					id=item.id
+					class="checkbox-base" class=data.dopClass
+					name=typeof data.name === "undefined" ? item.type: data.name
+					value=typeof item.value === "undefined" ? "" : item.value )&attributes(attr)
+				label(for=item.id)
+					span
+						<svg width="11" height="8" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><path d="M1 3.5 4.5 7 10 1" stroke="#396542"/></svg>
+					span= item.labelText
+
+//-
+	
+	+checkboxBase({
+		name:'checkbox-name',
+		title: 'Что вы хотите получать?',
+		listCheckbox: [
+			{
+				id: 'checkbox-1',
+				value:'checkbox-1',
+				labelText: 'Напоминания из календаря приёма'
+			},
+			{
+				id: 'checkbox-2',
+				value:'checkbox-2',
+				labelText: 'Напоминания из календаря приёма'
+			},
+		]
+	})
+
+mixin checkboxButton(data)
+	- attr = data.attr || ''
+
+	div(class="checkbox-button")
+		each item in data.items
+			div(class="input-button-green")
+				input(name=data.name type="checkbox" value=item.value id=item.id)&attributes(item.attr)
+				label(for=item.id )
+					span= item.text
+
+mixin checkboxSwitch(data)
+	- attr = data.attr || ''
+	div(class="form-field" class=data.dopClass)
+		if(data.fieldTitle)
+			span(class="field-title")= data.fieldTitle
+		each item in data.items
+			label(class="checkbox-ios")
+				input(type="checkbox" checked)&attributes(item.attr)
+				span(class="checkbox-ios-switch")
+

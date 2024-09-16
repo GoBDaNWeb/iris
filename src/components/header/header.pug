@@ -1,0 +1,63 @@
+
+mixin header(data)
+
+	header.header(class=data.dopClass)
+		div.container
+			div.header__container
+				div.col
+					a.logo-link(href="#")
+						+icon({
+							name: 'logo',
+							mod: 'icon--fill'
+						})
+						span Партнерство аптечных сетей
+					div.select-lang.hide-phone
+						+lang(data)
+					+button({
+						dopClass: 'button-point button-border button-40 hide-phone',
+						buttonText: 'Москва',
+						icon:{
+							name: 'point',
+							mod: 'icon--stroke'
+						}
+					})
+				div.col
+					span iris
+					+icon({
+						name: 'header-menu',
+						mod: 'icon--stroke'
+					})
+					span consumed
+				div.col
+					+linkPhone({
+						dopClass: '',
+						phoneHref: '+78007778604',
+						text: '8-800-777-8-604',
+						
+					})
+					+button({
+						dopClass: 'button button-40 button-border popup-button',
+						href: '#popup-call',
+						buttonText: 'Заказать звонок',
+						icon:{
+							name: 'phone',
+							mod: ''
+						},
+						attr:{
+							'data-effect':'mfp-move-horizontal'
+						}
+					})
+					+button({
+						dopClass: 'button-search ',
+						icon:{
+							name: 'loupe',
+							mod: 'icon--stroke'
+						}
+					})
+					+button({
+						dopClass: 'button-lk hide-phone',
+						icon:{
+							name: 'lk',
+							mod: 'icon--stroke'
+						}
+					})

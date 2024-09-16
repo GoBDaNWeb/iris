@@ -1,0 +1,108 @@
+mixin footer(data)
+
+	//- атрибуты
+		- attr = data.attr || ''
+
+	footer.footer 
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				div.footer__info
+					div.col
+						a.logo-link(href="#")
+							+icon({
+								name: 'logo',
+								mod: 'icon--fill'
+							})
+							span Партнерство аптечных сетей
+						+linkPhone({
+							dopClass: 'txt-l',
+							phoneHref: '+78007778604',
+							text: '8-800-777-8-604'
+						})
+						+button({
+							dopClass: 'button button-40 button-border popup-button',
+							href: '#popup-call',
+							buttonText: 'Заказать звонок',
+							attr:{
+								'data-effect':'mfp-move-horizontal'
+							}
+						})
+						+linkMail({
+							dopClass: '',
+							mailHref: 'info@irispharma.ru',
+							text: 'info@irispharma.ru'
+						})
+					div.col
+						+footerMenu({
+							dopClass:'hide-phone',
+							items:[
+								{
+									text: 'О компании',
+									href: '#menu-seciton-title',
+								},
+								{
+									text: 'Бренды',
+									href: '#menu-seciton-text',
+								},
+								{
+									text: 'Производителям',
+									href: '#menu-seciton-color',
+								},
+								{
+									text: 'Оптовикам',
+									href: '#menu-seciton-color',
+								},
+							],
+						})
+						+footerMenu({
+							dopClass:'hide-phone',
+							items:[
+								{
+									text: 'Сотрудничество',
+									href: '#menu-seciton-color',
+								},
+								{
+									text: 'Новости',
+									href: '#menu-seciton-color',
+								},
+								{
+									text: 'Акции',
+									href: '#menu-seciton-color',
+								},
+								{
+									text: 'Контакты',
+									href: '#menu-seciton-color',
+								},
+							],
+						})
+						+footerMenu({
+							dopClass:'hide-phone',
+							items:[
+								{
+									text: 'Услуги',
+									href: '#menu-seciton-color',
+								},
+								{
+									text: 'Работа с ассортиментом',
+									href: '#menu-seciton-color',
+								},
+								{
+									text: 'Выход на маркетплейсы',
+									href: '#menu-seciton-color',
+								},
+								{
+									text: 'Ecommerce & Digital',
+									href: '#menu-seciton-color',
+								},
+							],
+						})
+
+				div.footer__bottom
+					div.copy.txt-s
+						span © Irispharma, 2023
+					div.dev.txt-s
+						a(class="link-eclat") Разработка сайта
+							+icon({
+								name: 'Eclat',
+								mod: ''
+							})

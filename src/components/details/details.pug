@@ -1,0 +1,31 @@
+include ../dropdown/dropdown
+mixin selectLang(data)
+	ul(class="select-lang__list wrap radius-10")
+		li(class="select-lang__item")
+			a(href="#") English
+		li(class="select-lang__item")
+			a(href="#") other lang
+
+mixin lang(data)
+	div(class="select-lang__wrap ")
+		//-
+			div(class="select-lang select-lang--open")
+				span(class="select-lang__current") Русский
+		+dropDownButton({
+			dopClass:'select-lang__select',
+			text: 'Ru',
+			data: 'lang'
+		})
+		+dropDownContent({
+			data: 'lang',
+			selectLang: {},
+		})
+
+
+//-
+	+lang(data)
+	<div class="select-lang">
+		<a href="//eclat.moscow/" class="select-lang_link active">ru</a>
+		<span style="color: #fff;"> - </span>
+		<a href="//eclat.moscow/en/" class="select-lang_link">en</a>
+	</div>

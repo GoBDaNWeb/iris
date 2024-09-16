@@ -1,0 +1,71 @@
+// Стили для элементов
+
+.input {
+	width: 100%;
+	height: 44px;
+	padding-bottom: 20px;
+	border: none;
+	border-bottom: 1px solid $color-grey;
+	font-family: $Onest-Regular;
+	font-size: 18px;
+	line-height: 130%;
+	color: $color-black;
+	@include mq('desktop-tiny') { //max-width 1024px  (мобильное меню)
+		padding-top: 35px;
+		padding-bottom: 5px;
+		font-size: 14px;
+	}
+	@include mq('phone') { //max-width 768px 
+		padding-top: 45px;
+		font-size: 16px;
+	}
+	&::placeholder {
+		font-family: $Onest-Regular;
+		font-size: 18px;
+		line-height: 130%;
+		color: $color-grey;
+		@include mq('desktop-tiny') { //max-width 1024px  (мобильное меню)
+			font-size: 14px;
+		}
+		@include mq('phone') { //max-width 768px 
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+	&:valid:focus {
+		border-color: $color-black;
+	}
+	&.invalid {
+		color: $color-error;
+		border-color: $color-error;
+	}
+}
+
+
+input[type=submit] {
+	border: none;
+	cursor: pointer;
+}
+
+
+.form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 48px;
+	
+	&__row {
+
+	}
+	.form-error {
+		font-size: 14px;
+		color: $color-error;
+	}
+	.form-policy {
+		margin-top: 30px;
+		color: $color-grey;
+		a {
+			color: $color-violet;
+		}
+	}
+}
+

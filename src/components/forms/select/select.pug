@@ -1,0 +1,36 @@
+include ../radio/radio
+
+
+mixin select(data)
+
+	//- атрибуты
+	- attr = data.attr || ''
+	- type = data.type || 'text'
+
+	div(class='form-field' class=data.dopClass)
+		div(class='select__container' class=data.containerDopClass)
+			select(class='select' class=data.selectDopClass)&attributes(attr)!=data.text
+				each option in data.option
+					option(class='select__option')&attributes(option.attr)!=option.text
+
+
+
+
+mixin selectCustom(data)
+	//- атрибуты
+	- attr = data.attr || ''
+	- type = data.type || 'text'
+	div(class="form-field" class=data.dopClass)
+		if(data.fieldTitle)
+			span(class="field-title")= data.fieldTitle
+		div(class="select-wrap" class=data.dopClassWrap)
+			ul(class="select-selected" class=data.dopClassSelect)
+				li
+					div(class="option" class=data.selectOption)
+						span= data.selectText
+			ul(class="select-items")
+				each item in data.options
+					li
+						div(class="option " class=item.classOption)
+							p= item.text
+			

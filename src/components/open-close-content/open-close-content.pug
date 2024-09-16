@@ -1,0 +1,62 @@
+include ../../helpers/mixins
+
+mixin hiddenItem(data)
+	ul(class="hidden-item" class=dopClass)
+		each item in data.list
+			li !{item.text}
+	span(class="button button-hide show-item txt-m" ) 
+		+icon({
+			name: 'arrow-button',
+			mod: 'icon--stroke'
+		})
+		span(class="show" ) Показать ещё
+		span(class="hide" ) Cкрыть
+
+	//-
+		+hiddenItem({
+			list:[
+				{
+					text:'пункт 1'
+				},
+				{
+					text:'пункт 1'
+				},
+				{
+					text:'пункт 2'
+				},
+				{
+					text:'пункт 3'
+				},
+				{
+					text:'пункт 4'
+				},
+				{
+					text:'пункт 5'
+				},
+				{
+					text:'пункт 6'
+				},
+				{
+					text:'пункт 7'
+				},
+				{
+					text:'пункт 8'
+				},
+				{
+					text:'пункт 9'
+				},
+				{
+					text:'пункт 10'
+				},
+			]
+		})
+
+mixin hiddenTextSmall(data)
+	div(class="hidden-text-small")
+		div(class="hidden-text-small__limiter") !{data.content}
+			div(class="hidden-text-small__bottom")
+
+		span(class="button-hide hidden-text-small__button" ) 
+			
+			span(class="show" ) показать
+			span(class="hide" ) скрыть

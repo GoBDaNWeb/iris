@@ -1,0 +1,89 @@
+block variables
+include ../helpers/mixins
+include ../components/header/header
+include ../components/footer/footer
+include ../components/dropdown/dropdown
+include ../components/elements/elements
+include ../components/ui-buttons/ui-buttons
+include ../components/open-close-content/open-close-content
+include ../components/slider/slider
+include ../components/details/details
+include ../components/popup/popup
+include ../components/menu/menu
+include ../components/forms/forms
+
+
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		meta(content="" name="author")
+		meta(content="" name="description")
+		meta(content="" name="keywords")
+		meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport')
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+		meta(http-equiv="Cache-Control" content="max-age=3600, must-revalidate")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+		script(src="libs/jquery-3.6.0.min.js")
+		link(rel="stylesheet" href="libs/slick-1.8.1/slick.css")
+		link(rel="stylesheet" href="libs/slick-1.8.1/slick-theme.css")
+		link(rel="stylesheet" href="libs/magnific-popup/dist/magnific-popup.css")
+		link(rel="stylesheet" href="css/style.css")
+
+		block head
+
+	body
+		
+		.page
+			+header({
+				dopClass: headerClass,
+			})
+
+			main.main
+				.page(class=pageClass )
+					block content
+
+			//- block footer
+			+footer({})
+			//- cookie
+				+cookie({
+					text: {
+						text: 'Мы используем cookies, <br> чтобы быть лучше'
+					},
+					btn: {
+						text: 'Хорошо',
+						class: 'btn btn--secondary'
+					},
+					img: {
+						src: '/upload/example/cookie-img.png'
+					},
+				})
+
+			//- block popup
+			//- block tooltip
+		block scripts
+		
+		script(src="libs/blazy.min.js")
+		script(src="libs/svg4everybody.min.js")
+		script(src="libs/delighters.min.js")
+		script(src="libs/slick-1.8.1/slick.min.js")
+		script(src="libs/magnific-popup/dist/jquery.magnific-popup.js")
+		script(src="js/b-lazy.js")
+		script(src="js/svg4everybody.js")
+		script(src="js/dropdown.js")
+		script(src="js/open-close-content.js")
+		script(src="js/slider.js")
+		script(src="js/popup.js")
+		script(src="js/forms.js")
+		script(src="js/accordeon.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js") 
+		script(src="js/script.js")
+
+		//-
+			each file in htmlWebpackPlugin.files.js
+				script(src=`${file}`, defer)
+		+magnificPopupCall(data)
+		+magnificPopupThank(data)

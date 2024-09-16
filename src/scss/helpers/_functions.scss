@@ -1,0 +1,24 @@
+@function strip-unit($number) {
+	@if type-of($number)=='number'and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+@function vw($size, $media) {
+	$size-num: strip-unit($size);
+	$media-num: strip-unit($media);
+	@return $size-num/$media-num * 100vw;
+}
+
+//функция пересчета шрифтов
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}

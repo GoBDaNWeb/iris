@@ -1,0 +1,247 @@
+Редактирование итоговых файлов стили норм нужно править пути у картинок
+
+../../assets
+assets
+
+
+отступы проверяем,
+<svg
+<img
+</a
+<span
+=================================
+# git
+
+git checkout master
+
+git pull
+
+git checkout -b <branch_name>
+
+git status
+
+git add .
+
+git commit -m "комментарий"
+
+git checkout master
+
+git pull
+
+git merge <branch_name>
+
+git push
+
+git branch -d <branch_name> 
+
+!!! ВЕТКИ ДОЛЖНЫ БЫТЬ КОРОТКИЕ - ПОСЛЕ КАЖДОГО МЕРДЖА УДАЛЯТЬ
+=================================
+Подключение файлов
+import '../components/tabs/tabs'; js
+include ../components/popup/popup - pug
+@import '../../scss/helpers/_variables'; - css
+=================================
+&nbsp; - неразрывный пробел
+
+.rub::after { - знак рубля
+ content:" \20BD"
+ }
+&#8381; - знак рубля html
+=================================
+
+
+
+Переполнение текста
+text-overflow: ellipsis; // для mac
+max-height: calc(16px * 1.5 * 2); // для mac
+display: -webkit-box; 
+    -webkit-line-clamp: 2; // количество видимых строк
+    -webkit-box-orient: vertical;
+overflow: hidden;
+
+Список в 2 колонки по порядку сверху вниз
+ul { column-count: 2; }
+
+в swipere убрать баг с выделением следующего элемента
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+=================================
+.element {
+  /* Позиционирование */
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid red;
+  width: 200px;
+  height: 100px;
+  box-sizing: border-box;
+
+  /* Типографика */
+  font-family: Arial;
+  font-size: 25px;
+  font-style: italic;
+  text-decoration: none;
+  color: red;
+
+  /* Оформление */
+  background: red;
+  opacity: 1;
+
+  /* Анимации */
+  transform: translateX(5px);
+  animation: shake 0.3s infinite;
+}
+=================================
+$font-base: $Onest-Regular;
+$font-base-size: 24px;
+$font-base-lineheight: 126%;
+$font-base-weight: 400;
+
+
+$transition: all 0.25s ease;
+=================================
+@font-face {
+	font-family: 'IntroCondLight';
+	src: url(../fonts/IntroCondLight.ttf);
+}
+@font-face {
+	font-family: 'IntroCondBlack';
+	src: url(../fonts/IntroCondBlack.ttf);
+}
+@font-face {
+	font-family: 'StoryBrush';
+	src: url(../fonts/StoryBrush.ttf);
+}
+
+color: #f3c04b; - желтый
+color: #878480; - серый
+
+=================================
+.desktop {
+	@include mq('desktop-tiny') { //max-width 1024px
+		display: none !important;
+	}
+}
+.desktop-tiny {
+	@include mq-min('desktop-tiny') { //max-width 1024px
+		display: none !important;
+	}
+}
+
+.desktop-default {
+	@include mq('desktop-tiny') { //max-width 1024px
+		display: none !important;
+	}
+}
+=================================
+/* Breakpoints */
+$breakpoints: (
+  'phone-minimum': 319px, //min-max-width 320px
+  'phone-tiny': 330px, //min-max-width 331px
+  'phone-small': 479px, //min-max-width 480px
+  'phone': 767px, //min-max-width 768px 
+  'tablet': 1023px, //min-max-width 1024px  (мобильное меню)
+  'desktop-tiny': 1199px, //min-max-width 1200px
+  'desktop-small': 1439px, //min-max-width 1440px
+  'desktop-medium': 1599px, //min-max-width 1600px
+  'desktop-default': 1919px, //min-max-width 1920px
+);
+
+@include mq-min('desktop-default') { //mq-min - min-width
+      height: 400px;
+      max-height: none;
+    }
+
+@include mq-min('desktop-default') { //max-width 1920px
+      height: 400px;
+      max-height: none;
+    }
+
+@include mq('desktop-medium') { //max-width 1600px
+      height: 400px;
+      max-height: none;
+    }
+@include mq('desktop-small') { //max-width 1440px
+      height: 400px;
+      max-height: none;
+    }
+@include mq('desktop-tiny') { //max-width 1200px (начинается версия tablet размеры)
+      height: 400px;
+      max-height: none;
+    }
+@include mq('tablet') { //max-width 1024px  (мобильное меню)
+      height: 400px;
+      max-height: none;
+    }
+@include mq('phone') { //max-width 768px 
+      height: 400px;
+      max-height: none;
+    }
+@include mq('phone-small') { //max-width 480px
+      height: 400px;
+      max-height: none;
+    }
+@include mq('phone-tiny') { //max-width 331px
+      height: 400px;
+      max-height: none;
+    }
+@include mq('phone-minimum') { //max-width 320px
+      height: 400px;
+      max-height: none;
+    }
+
+=================================
+<!-- start section-top -->
+<!-- end section-top -->
+
+
+/* button start*/
+/*** product start*/
+
+/*** product end*/
+/* button end end*/
+
+
+section.section-top-main
+   div.section-header(data-delighter="start:0.95;end:0.95;")
+      div.container
+   div.section-body(data-delighter="start:0.95;end:0.95;")
+      div.container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

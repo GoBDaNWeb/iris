@@ -1,0 +1,85 @@
+.icon-svg {
+	display: inline-block;
+	transition: $transition;
+}
+.icon--fill {
+	fill: currentColor;
+
+}
+.icon--stroke {
+	stroke: currentColor;
+}
+
+.icon--full {
+	fill: currentColor;
+	stroke: currentColor;
+}
+
+.logo {
+	width: 124px; 
+	height: 44px;
+	flex-shrink: 0;
+	color: $color-violet;
+	@include mq('desktop-tiny') { //max-width 1200px (начинается версия таблет)
+		height: 34px;
+		width: 90px;
+	}
+	@include mq('phone') {
+		height: 22px;
+		width: 64px;
+	}
+}
+
+.arrow-button {
+	width: 16px; 
+	height: 14px;
+}
+
+.main-about-1 {
+	width: 165px; 
+	height: 105px;
+}
+.main-about-2 {
+	width: 165px; 
+	height: 105px;
+}
+.main-about-3 {
+	width: 165px; 
+	height: 105px;
+}
+
+.point {
+	width: 13px; 
+	height: 19px;
+}
+
+.header-menu {
+	width: 40px; 
+	height: 17px;
+	color: $color-violet
+}
+
+.loupe {
+	width: 17px; 
+	height: 19px;
+}
+
+.lk {
+	width: 18px; 
+	height: 18px;
+}
+
+.Eclat {
+	width: 60px; 
+	height: 15px;
+}
+
+.cross-popup {
+	width: 14px; 
+	height: 14px;
+}
+
+.phone {
+	width: 18px; 
+	height: 18px;
+}

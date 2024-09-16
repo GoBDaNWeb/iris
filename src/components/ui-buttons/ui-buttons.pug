@@ -1,0 +1,65 @@
+mixin button(data)
+	- attr = data.attr || ''
+	if(data.href)
+		a(href=data.href class="button" class=data.dopClass )&attributes(attr)
+			if data.buttonText 
+				span= data.buttonText
+			if data.icon 
+				+icon(data.icon)
+	else
+		span(class="button" class=data.dopClass )
+			if data.buttonText 
+				span= data.buttonText
+			if data.icon 
+				+icon(data.icon)
+
+	//-
+		***кнопка подробнее
+		+button({
+			dopClass: 'button-more button-50 txt-s',
+			href: '#',
+			buttonText: 'Подробнее',
+			icon:{
+				name: 'arrow-button',
+				mod: 'icon--stroke'
+			}
+		})
+
+		***перейти на сайт
+		+button({
+			dopClass: 'button-go txt-m',
+			buttonText: 'Перейти на сайт',
+			icon:{
+				name: 'arrow-button',
+				mod: 'icon--stroke'
+			}
+		})
+
+		***выбрать город
+		+button({
+			dopClass: 'button-point button-40',
+			buttonText: 'Перейти на сайт',
+			icon:{
+				name: 'point',
+				mod: 'icon--stroke'
+			}
+		})
+
+		***кнопка popup
+		+button({
+			dopClass: 'button button-40 button-border popup-button',
+			href: '#call',
+			buttonText: 'Заказать звонок',
+			attr:{
+				'data-effect':'mfp-move-horizontal'
+			}
+		})
+
+		***кнопка поиск
+		+button({
+			dopClass: 'button-search button-40',
+			icon:{
+				name: 'loupe',
+				mod: 'icon--stroke'
+			}
+		})

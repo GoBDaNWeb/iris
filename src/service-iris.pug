@@ -1,0 +1,214 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Услуги IRIS'
+	- var pageClass = 'service-iris-page'
+	- var headerClass = 'header-purple'
+
+block content
+	.container
+		+breadcrumbs({ list: [ { text: 'Главная', href: 'main.html' }, { text: 'Услуги IRIS', } ] })
+	.service-iris__hero
+		.container
+			.service-iris__hero__inner
+				.service-iris__hero_left
+					h1 IRIS (Integrated Retail Investment Strategies)
+					p ИРИС – холдинг, в который входят Партнерство аптечных сетей и ООО «КОНСУМЕД».
+					p Компания была создана в 2015 году в Москве. В IRIS входят только успешные аптечные сети, которые являются лидерами на рынках своего присутствия. Более 2700 аптек уже стали партнерами компании.
+				.service-iris__hero_right
+					img(src='assets/images/example/hero-pic-3.png', alt='')
+	.service-iris__directions
+		.container
+			.service-iris__directions_inner
+				h2 Наши направления
+				.service-iris__directions_list
+					.service-iris__direction__item
+						.service-iris__direction__item_content
+							h3 Продвижение производителей
+							p Помогаем фармацевтическим компаниям проводить трейд-маркетинговые и рекламные мероприятия централизованно и по единым стандартам, что позволяет делать их эффективнее, результативнее и успешнее!
+							.btns
+								+button({ dopClass: 'button-more button-50 txt-s', href: '#', buttonText: 'Подробнее', icon:{ name: 'arrow-button', mod: 'icon--stroke' } })
+						.service-iris__direction__item_image
+							.image-wrapper
+								img(src='assets/images/example/service-iris/direction1.png', alt='')
+								span 01
+					.service-iris__direction__item
+						.service-iris__direction__item_content
+							h3 Аптечным сетям
+							p 2700+ аптек входят в партнерство IRIS
+							.btns
+								+button({ dopClass: 'button-more button-50 txt-s', href: '#', buttonText: 'Подробнее', icon:{ name: 'arrow-button', mod: 'icon--stroke' } })
+								button.primary-btn(type='button') Войти в состав
+						.service-iris__direction__item_image
+							.image-wrapper
+								img(src='assets/images/example/service-iris/direction2.png', alt='')
+								span 02
+	.service-iris__awards
+		.container
+			.service-iris__awards_inner
+				h2 Награды
+				.service-iris__awards_list
+					.service-iris__awards__item
+						.service-iris__awards__item_content
+							h3 6 место
+							p в ТОП-500 аптечных сетей по итогам 2022 года по версии AlphaRM
+						.service-iris__awards__item_image
+							img(src='assets/images/example/service-iris/award1.png', alt='')
+						.service-iris__awards__item_image.mob
+							img(src='assets/images/example/service-iris/award1-mob.png', alt='')
+					.service-iris__awards__item
+						.service-iris__awards__item_content
+							h3 9 место
+							p в ТОР-20 компаний e-com сегмента российской фармацевтической розницы по итогам 2022 года по версии RNC Pharma
+						.service-iris__awards__item_image
+							img(src='assets/images/example/service-iris/award2.png', alt='')
+						.service-iris__awards__item_image.mob
+							img(src='assets/images/example/service-iris/award2-mob.png', alt='')
+	.service-iris__partners
+		.container
+			.service-iris__partners_inner
+				h2 Партнёры
+				.service-iris__partners-wrapper
+					.service-iris__partners_list-wrapper
+						h4 Аптечные сети
+						.service-iris__partners_list
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(
+										src='assets/images/example/partners/partners-logo-17.png',
+										alt=''
+									)
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Фармакопейка', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/partners-logo-8.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Твой доктор', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/partners-logo-9.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Здесь аптека', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/partners-logo-1.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Аптечество', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(
+										src='assets/images/example/partners/partners-logo-11.png',
+										alt=''
+									)
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'На Батуевской', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/partners-logo-6.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Аптека фармани', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/partners-logo-5.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Городская аптека', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/partners-logo-4.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Новая аптека', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/partners-logo-3.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Аптека эконом', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/shah.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Шах аптека', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(src='assets/images/example/partners/minicen.png', alt='')
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Аптека миницен', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					.service-iris__partners_list-wrapper
+						h4 Производственные партнёры
+						.service-iris__partners_list
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(
+										src='assets/images/example/partners/partners-logo-13.png',
+										alt=''
+									)
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(
+										src='assets/images/example/partners/partners-logo-15.png',
+										alt=''
+									)
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(
+										src='assets/images/example/partners/partners-logo-14.png',
+										alt=''
+									)
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+							a.service-iris__partners__item(href='#')
+								.partner__item__pic
+									img(
+										src='assets/images/example/partners/partners-logo-16.png',
+										alt=''
+									)
+								.partner__item__content
+									+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+	.service-iris__apeal
+		.container
+			.service-iris__apeal_inner
+				.service-iris__apeal_content
+					h2 Обращение руководства
+					span Для эффективного управления запасами мы используем Symphony (Симфони) - специализированное программное обеспечение, основанное на ТОС (теории ограничений).
+					p Для эффективного управления запасами мы используем Symphony (Симфони) - специализированное программное обеспечение, основанное на ТОС (теории ограничений).Для эффективного управления запасами мы используем Symphony (Симфони) - специализированное программное обеспечение, основанное на ТОС (теории ограничений).
+					p Для эффективного управления запасами мы используем Symphony (Симфони) - специализированное программное обеспечение, основанное на ТОС (теории ограничений).Для эффективного управления запасами мы используем Symphony (Симфони) - специализированное программное обеспечение, основанное на ТОС (теории ограничений).
+					h5 С уважением, Генеральный директор ООО "ИРИС" Орлова Галина
+				.service-iris__apeal_image
+					img(src='assets/images/example/service-iris/person.png', alt='')
+	.geography
+		.container
+			.geography__inner
+				.geography__text
+					h2 География присутствия IRIS
+					p С нашей стороны возможна индивидуальная проработка рекламной кампании в соответствии с целями партнёра!
+
+				img.geography__map(src='assets/images/example/geography.svg', alt='')
+	section.contact.contact2
+		.container
+			.contact__content
+				.contact__left
+					h2 Готовы к сотрудничеству!
+					p Наш представитель свяжется с Вами в течение дня и ответит на все интересующие вопросы
+
+				.contact__right
+					form.contact__form
+						.contact__form__fields
+							input(type='text', placeholder='Ваше имя')
+							input(type='text', placeholder='Компания')
+							input(type='text', placeholder='Телефон')
+							input(type='text', placeholder='E-mail')
+							textarea(placeholder='Сообщение', resize='none')
+
+						.contact__form__bottom
+							button.primary-btn(type='submit') Отправить
+							p Заполняя данную форму вы соглашаетесь с политикой конфиденциальности сайта. <br>Сайт защищен Google recaptcha.
+								|
+								a(href='') Политика конфиденциальности
+								span &nbsp;и&nbsp;
+								a(href='') условия использования.

@@ -1,0 +1,649 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Главная'
+	- var pageClass = 'main-page'
+	- var headerClass = 'header-white'
+
+block content
+	section.section-top-main
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.top-main__img
+				+img({
+					path:'assets/images/example/top-main/back-main.png'
+				})
+			div.container
+				
+				div.top-main__container
+					.col
+						h1.h1 Сила партнерства – создание успешного бизнеса
+						div.slogan
+							p <span>Синергия:</span> <span>Consumed R&D</span> + <span>IRIS Commerce</span>
+
+					.col
+						div.top-main__adv
+							+cardType1({
+								dopClassImg:'hide-phone-small',
+								dopClassImgPhone:'hide-desk-phone-small',
+								img:{
+									path:'assets/images/example/top-main/top-main-adv-1.png',
+								},
+								imgPhone: {
+									path:'assets/images/example/top-main/top-main-adv-1-phone.png',
+								},
+								value: '2 700+',
+								desc: 'Аптек входят в партнерство IRIS'
+							})
+							+cardType1({
+								img:{
+									path:'assets/images/example/top-main/top-main-adv-2.png',
+									
+								},
+								value: '15',
+								desc: 'Собственных брендов'
+							})
+							+cardType1({
+								img:{
+									path:'assets/images/example/top-main/top-main-adv-3.png',
+									
+								},
+								value: '9 место',
+								desc: 'В ТОР-20 компаний e-com сегмента российской фармацевтической розницы по итогам 2022 года по версии RNC Pharma'
+							})
+							+cardType1({
+								value: '6 место',
+								desc: 'В ТОП-500 аптечных сетей по итогам 2022 года по версии AlphaRM'
+							})
+							+cardType1({
+								dopClassImg:'hide-phone-small',
+								dopClassImgPhone:'hide-desk-phone-small',
+								img:{
+									path:'assets/images/example/top-main/top-main-adv-5.png',
+									
+								},
+								imgPhone: {
+									path:'assets/images/example/top-main/top-main-adv-5-phone.png',
+								},
+								value: '1 000',
+								desc: 'Препаратов'
+							})
+	section.section-about-company
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				div.about-company.content
+					div.col
+						h2.h2 О компании Iris
+						div.about-company__content.txt-l
+							p <span class="color-violet">IRIS и КОНСУМЕД</span> совместно являются фармацевтической экосистемой, позволяющей максимально реализовать потенциал каждой из компании за счет эффекта синергии.
+							+button({
+								dopClass: 'button-more button-50 txt-s',
+								href: '#',
+								buttonText: 'Подробнее',
+								icon:{
+									name: 'arrow-button',
+									mod: 'icon--stroke'
+								}
+							})
+					div.col
+						div.about-company__img.radius-20
+							+img({
+								path: 'assets/images/example/about-main/about-company-main.png'
+							})
+					div.col
+						h3.h3 IRIS (Integrated Retail Investment Strategies)
+						div.about-company__content.txt-l
+							p Партнёрство ведущих региональных аптечных сетей. Компания была создана в 2015 году в Москве. В IRIS входят только успешные аптечные сети, которые являются лидерами на рынках своего присутствия. Около 3000 аптек уже стали партнёрами компании.
+					div.col
+						h3.h3 КОНСУМЕД
+						div.content.txt-l
+							p Производитель фармацевтической продукции, объединяющий в себе компетенции поиска, разработки, регистрации и вывода на рынок инновационных продуктов.
+					div.row
+						h3.h3 Мы являемся экспертами в областях:
+						.about-company__container
+							+cardType2({
+								icon:{
+									name:'main-about-1',
+									mod:''
+								},
+								title: 'R&D',
+								desc: 'в состав IRIS входит ООО “КОНСУМЕД”, производитель инновационных препаратов, включающей в себя: команду разработчиков и успешные СТМ.'
+							})
+							+cardType2({
+								icon:{
+									name:'main-about-2',
+									mod:''
+								},
+								title: 'Ritail Commerce',
+								desc: 'В состав входят более 10 000 аптек и 11 аптечных сетей, являющимися лидерами на рынках своего присутствия.'
+							})
+							+cardType2({
+								icon:{
+									name:'main-about-3',
+									mod:''
+								},
+								title: 'E-commerce',
+								desc: 'сбыт препаратов через известные маркетплейсы (ОЗОН, WB, Яндекс Маркет и др.) и интернет-магазины сетевых аптек. и получение с повышенной маржинальностью  и  входят только успешные аптечные сети, которые являются лидерами на рынках своего присутствия.'
+							})
+	section.section-services
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Услуги
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h3.h3 Услуги Iris
+				.services__container 
+					+cardType3({
+						count: '01',
+						href:'#',
+						img:{
+							path: 'assets/images/example/services-main/services-iris-1.png'
+						},
+						title: 'Производителям',
+						list: [
+							{
+								txt:'Маркетинговые контракты участниками партнерства ИРИС'
+							},
+							{
+								txt:'E-commerce'
+							},
+							{
+								txt:'Производство СТМ'
+							}
+						],
+					})
+					+cardType3({
+						count: '02',
+						href:'#',
+						img:{
+							path: 'assets/images/example/services-main/services-iris-2.png'
+						},
+						title: 'Аптечным сетям',
+						txt: '<p>Вступление в ИРИС: повышение маржинальности за счет доступа к маркетинговым контрактам ИРИС и портфелю ВМТ (высокомаржинальные товары) ИРИС</p>'
+					})
+				h3.h3 Услуги Consumed
+				.services__container 
+					+cardType3({
+						count: '01',
+						href:'#',
+						img:{
+							path: 'assets/images/example/services-main/services-consumed-1.png'
+						},
+						title: 'Производителям',
+						txt:'<p>Совместная разработка и вывод на рынок продуктов: Разработка продуктов, Кобрендинг, совместное владение ТЗ, совместное продвижение, продажа ТЗ и интеллектуальной собственности</p>'
+					})
+					+cardType3({
+						count: '02',
+						href:'#',
+						img:{
+							path: 'assets/images/example/services-main/services-consumed-2.png'
+						},
+						title: 'Розничным сетям',
+						txt: '<p>Портфель ВМТ ИРИС</p>'
+					})
+					+cardType3({
+						count: '03',
+						href:'#',
+						img:{
+							path: 'assets/images/example/services-main/services-consumed-3.png'
+						},
+						title: 'Инвесторам',
+						txt: '<p>Продажа торговых марок с высокой капитализацией</p> <p>Привлекаем инвестиции для создания новых торговых марок с высокой капитализацией</p>'
+					})
+	section.section-assortment
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Эксклюзивный ассортимент
+				div.assortment__desc.txt-l
+					.col
+						p IRIS - создает и выводит на рынок препараты в следующих сегментах: БАД, ЛС ОТС, ЛС RX. На данный момент в портфель компании входит:
+					.col
+						p 15 брендов <br> 1000+ SKU СТМ
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				.assortment__container
+					+cardType4({
+						img:{
+							path: 'assets/images/example/services-main/services-iris-1.png'
+						},
+						title: 'БАД',
+						content:[
+							{
+								subtitle:'Irispharma',
+								hiddenItem:{
+									list:[
+										{
+											text:'гастроэнтерология'
+										},
+										{
+											text:'опорно-двигательный аппарат'
+										},
+										{
+											text:'витаминно-минеральные комплексы'
+										},
+										{
+											text:'поддержка иммунитета'
+										},
+										{
+											text:'коррекция веса'
+										},
+										{
+											text:'гастроэнтерология'
+										},
+										{
+											text:'опорно-двигательный аппарат'
+										},
+										{
+											text:'витаминно-минеральные комплексы'
+										},
+										{
+											text:'поддержка иммунитета'
+										},
+										{
+											text:'коррекция веса'
+										},
+									]
+								},
+							},
+						]
+					})
+					+cardType4({
+						img:{
+							path: 'assets/images/example/services-main/services-iris-1.png'
+						},
+						title: 'ЛС ОТС',
+						content:[
+							{
+								subtitle:'Реноксилиум',
+								list: [
+									{
+										text:'урология'
+									},
+								],
+							},
+							{
+								subtitle:'Биклитон',
+								list: [
+									{
+										text:'гинекология'
+									},
+									{
+										text:'гастроэнтеролигия'
+									},
+								],
+							},
+						]
+					})
+					+cardType4({
+						img:{
+							path: 'assets/images/example/services-main/services-iris-1.png'
+						},
+						title: 'ЛС RX',
+						content:[
+							{
+								subtitle:'Меклофеноксат',
+								list: [
+									{
+										text:'неврология'
+									},
+								],
+							},
+							{
+								subtitle:'Холестирамин',
+								list: [
+									{
+										text:'гастроэнтеролигия'
+									},
+								],
+							},
+							{
+								subtitle:'Типресс',
+								list: [
+									{
+										text:'аллергия'
+									},
+								],
+							},
+						]
+					})
+					+cardType4({
+						img:{
+							path: 'assets/images/example/services-main/services-iris-1.png'
+						},
+						title: 'Лечебная косметика',
+						content:[
+							{
+								subtitle:'Спрей для интимной гигиены',
+								hiddenItem:{
+									list:[
+										{
+											text:'урология, гинекология'
+										},
+										
+									]
+								},
+							},
+						]
+					})
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				.brands__wrap.radius-20
+					h3.h3 15 брендов
+					.brands__container
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-1.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-2.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-3.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-4.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-5.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-6.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-7.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-8.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-9.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-10.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-11.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-12.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-13.png'
+							}
+						})
+						+cardBrand({
+							href:'#',
+							img:{
+								path:'assets/images/example/brand/brand-14.png'
+							}
+						})
+	section.section-new
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Новинки
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				+sliderNew({
+					items:[
+						{
+							img:{
+								path: 'assets/images/example/new/new-1.png'
+							},
+							name:'Бетулин с цетрарией',
+							desc:'Irispharma'
+						},
+						{
+							img:{
+								path: 'assets/images/example/new/new-2.png'
+							},
+							name:'Пептидный коллаген',
+							desc:'от Irispharma'
+						},
+						{
+							img:{
+								path: 'assets/images/example/new/new-3.png'
+							},
+							name:'Омега 3-6-9 ',
+							desc:'от Irispharma'
+						},
+						{
+							img:{
+								path: 'assets/images/example/new/new-4.png'
+							},
+							name:'Бетулин с цетрарией',
+							desc:'Irispharma'
+						},
+						{
+							img:{
+								path: 'assets/images/example/new/new-1.png'
+							},
+							name:'Бетулин с цетрарией',
+							desc:'Irispharma'
+						},
+						{
+							img:{
+								path: 'assets/images/example/new/new-2.png'
+							},
+							name:'Пептидный коллаген',
+							desc:'от Irispharma'
+						},
+					]
+				})
+	section.section-partners
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Действующие партнеры
+				div.partners__desc.txt-l
+					p Компания была создана в 2015 году в Москве. В IRIS входят только успешные аптечные сети, которые являются лидерами на рынках своего присутствия.
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				div.partners__wrap
+					.col.radius-20
+						h5.h5 Аптечные сети
+						div.partners__container
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-1.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-2.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-3.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-4.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-5.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-6.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-7.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-8.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-9.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-10.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-11.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-12.png',
+								})
+					.col.radius-20
+						h5.h5 Производственные партнёры
+						div.partners__container
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-13.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-14.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-15.png',
+								})
+							div.partners__logo
+								+img({
+									path: 'assets/images/example/partners/partners-logo-16.png',
+								})
+	section.section-news
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Новости
+				+button({
+					dopClass: 'button-more button-50 txt-s',
+					href: '#',
+					buttonText: 'Смотреть все',
+					icon:{
+						name: 'arrow-button',
+						mod: 'icon--stroke'
+					}
+				})
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				
+				+sliderNews({
+					items:[
+						{
+							href: '#',
+							img:{
+								path: 'assets/images/example/news/news-preview-1.png'
+							},
+							data:'19.10.2023',
+							preview:'IRIS принял участие в 21-м Аптечном саммите'
+						},
+						{
+							href: '#',
+							img:{
+								path: 'assets/images/example/news/news-preview-2.png'
+							},
+							data:'19.10.2023',
+							preview:'Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах. Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах'
+						},
+						{
+							href: '#',
+							img:{
+								path: 'assets/images/example/news/news-preview-3.png'
+							},
+							data:'19.10.2023',
+							preview:'IRIS принял участие в 21-м Аптечном саммите'
+						},
+						{
+							href: '#',
+							img:{
+								path: 'assets/images/example/news/news-preview-1.png'
+							},
+							data:'19.10.2023',
+							preview:'Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах'
+						},
+					]
+				})
+	section.section-advantage
+		div.section-body(data-delighter="start:0.95;end:0.95;")
+			div.container
+				
+				+sliderAdvantage({
+					items:[
+						{
+							href:'#',
+							title: 'Качество продукции подтверждено исследованиями.',
+							preview: 'Качество продукции подтверждено исследованиями.',
+							img:{
+								path: 'assets/images/example/advantage/main-adv-1.png'
+							}
+						},
+						{
+							href:'#',
+							title: 'Качество продукции подтверждено исследованиями.',
+							preview: 'Качество продукции подтверждено исследованиями. Качество продукции подтверждено исследованиями. Качество продукции подтверждено исследованиями.',
+							img:{
+								path: 'assets/images/example/advantage/main-adv-1.png'
+							}
+						},
+						{
+							href:'#',
+							title: 'Качество продукции подтверждено исследованиями.',
+							preview: 'Качество продукции подтверждено исследованиями.',
+							img:{
+								path: 'assets/images/example/advantage/main-adv-1.png'
+							}
+						},
+						{
+							href:'#',
+							title: 'Качество продукции подтверждено исследованиями.',
+							preview: 'Качество продукции подтверждено исследованиями.',
+							img:{
+								path: 'assets/images/example/advantage/main-adv-1.png'
+							}
+						},
+					]
+				})
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,131 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Наши бренды'
+	- var pageClass = 'brends-page'
+	- var headerClass = 'header-purple'
+
+block content
+	.container
+		+breadcrumbs({ list: [ { text: 'Главная', href: 'main.html' }, { text: 'Наши бренды', } ] })
+	.hero-brends
+		.container
+			h1 Наши бренды
+			p Пример текста. Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов
+	.brends-list
+		.container
+			.brends-list__inner
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-1.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Consumed
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-2.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Irispharma
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-3.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Spice Active
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-4.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Consumed kids
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-5.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Little hands
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-6.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Wellfix
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-7.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Up & go
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-8.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Dino Rhino
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-9.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Iris
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-10.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Mirida
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-11.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Zero white
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-12.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Pirate
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-13.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Доктор Нутришин
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+				a.brend__item(href='#')
+					.brend__item__pic
+						img(src='assets/images/example/brand/brand-14.png', alt='')
+					.brend__item__content
+						.brend__item__content_text
+							h5 Moly’s
+							p Мы готовы предложить СТМ аптечным сетям, которые хотят повысить маржинальность продаж и приобрести готовый портфель продукции ВМП у одного из операторов.
+						+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 

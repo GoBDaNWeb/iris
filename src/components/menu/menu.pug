@@ -1,0 +1,30 @@
+mixin footerMenu(data)
+	ul(class="footer-menu txt-l" class=data.dopClass)
+		each item in data.items
+			li
+				a(href=(item.href))= item.text
+	
+	//-
+		<ul class="footer-menu">
+			<li><a href="#">Пункт 1</a></li>
+			<li><a href="#">Пункт 2</a></li>
+			<li><a href="#">Пункт 3</a></li>
+			<li><a href="#">Пункт 4</a></li>
+		</ul>
+
+		+footerMenu({
+			items:[
+				{
+					text: 'Заголовки',
+					href: '#menu-seciton-title',
+				},
+				{
+					text: 'Текст',
+					href: '#menu-seciton-text',
+				},
+				{
+					text: 'Цвета',
+					href: '#menu-seciton-color',
+				}
+			],
+		})

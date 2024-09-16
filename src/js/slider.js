@@ -1,0 +1,3 @@
+import '../components/slider/slider';
+
+

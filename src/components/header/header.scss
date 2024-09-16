@@ -1,0 +1,205 @@
+.header {
+    position: relative;
+    z-index: 2;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, calc(100% / 3 - 30px * 2 / 3));
+        justify-content: space-between;
+        column-gap: 30px;
+        height: 80px;
+        @include mq('desktop-tiny') {
+            height: 70px;
+        }
+        @include mq('phone') {
+            height: 60px;
+        }
+    }
+    
+    .col {
+        display: flex;
+        align-items: center;
+        &:nth-child(1){
+            column-gap: 34px;
+            @include mq('desktop-tiny') {
+                column-gap: 26px;
+            }
+        }
+        &:nth-child(2){
+            justify-content: center;
+            column-gap: 34px;
+            span {
+                position: relative;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $color-violet;
+                &:first-child {
+                    left: -24px;
+                    @include mq('tablet') {
+                        display: none;
+                    }
+                }
+                &:nth-child(3) {
+                    right: -80px;
+                    @include mq('tablet') {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &:nth-child(3){
+            justify-content: flex-end;
+            column-gap: 5px;
+        }
+    }
+    .header-menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .link-phone {
+        font-size: 14px;
+        margin-right: 24px;
+        @include mq('tablet') {
+            display: none;
+        }
+    }
+    .button {
+        font-size: 14px;
+    }
+    .popup-button {
+        padding: 0 20px;
+        white-space: nowrap;
+        @include mq('tablet') {
+            width: 40px;
+            padding: 0;
+        }
+        .icon-svg {
+            @include mq-min('tablet') {
+                display: none;
+            }
+        }
+        span {
+            @include mq('tablet') {
+                display: none;
+            }
+        }
+    }
+}
+
+.header-white {
+    border-bottom: 1px solid $color-white;
+    .logo-link {
+        color: $color-white;
+        &:hover {
+            span {
+                color: $color-white;
+            }
+        }
+    }
+    .logo {
+        color: $color-white;
+    }
+    .select-lang {
+        &__select {
+            color: $color-white;
+        }
+    }
+    .button-point {
+        border-color: $color-white;
+        color: $color-white;
+        .icon-svg {
+            color: $color-white;
+        }
+        span {
+            @include mq('tablet') {
+                display: none;
+            }
+        }
+    }
+    .col{
+        &:nth-child(2){
+            span {
+                color: $color-white;
+            }
+        } 
+    }
+    .header-menu {
+        color: $color-white;
+    }
+    .link-phone {
+        color: $color-white;
+        @include mq('desktop-tiny') {
+            display: none;
+        }
+    }
+    .popup-button {
+        border-color: $color-white;
+        color: $color-white;
+    }
+    .button-search, .button-lk {
+        border-color: $color-white;
+        .icon-svg {
+            color: $color-white;
+        }
+    }
+}
+
+
+.header-purple {
+    border-bottom: 1px solid $color-violet;
+    .logo-link {
+        color: $color-violet;
+        &:hover {
+            span {
+                color: $color-violet;
+            }
+        }
+    }
+    .logo {
+        color: $color-violet;
+    }
+    .select-lang {
+        &__select {
+            color: $color-violet;
+        }
+    }
+    .button-point {
+        border-color: $color-violet;
+        color: $color-violet;
+        .icon-svg {
+            color: $color-violet;
+        }
+        span {
+            @include mq('tablet') {
+                display: none;
+            }
+        }
+    }
+    .col{
+        &:nth-child(2){
+            span {
+                color: $color-violet;
+            }
+        } 
+    }
+    .header-menu {
+        color: $color-violet;
+    }
+    .link-phone {
+        color: $color-violet;
+        @include mq('desktop-tiny') {
+            display: none;
+        }
+    }
+    .popup-button {
+        border-color: $color-violet;
+        color: $color-violet;
+    }
+    .button-search, .button-lk {
+        border-color: $color-violet;
+        .icon-svg {
+            color: $color-violet;
+        }
+    }
+}
+

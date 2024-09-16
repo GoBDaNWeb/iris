@@ -1,0 +1,67 @@
+include ../../helpers/mixins
+
+mixin magnificPopupCall(data)
+	div(id="popup-call" class="mfp-hide popup mfp-with-anim" )
+		div(class="button popup-modal-close")
+			+icon({
+				name:'cross-popup', 
+				mod:'icon--stroke'
+			})
+		div.popup__wrap
+			span(class="h2") Заказать проект
+			+formPopup({
+				dopClass: 'form-call',
+				submitValue:'Отправить',
+				policy:'Y',
+				listRow:[
+					
+					{
+						listField: [
+							{
+								input: {
+									id: 'input-id',
+									attr: {
+										'name': 'name',
+										'value': '',
+										'placeholder': 'Ваше имя',
+									}
+								}
+							},
+							
+						]
+					},
+					{
+						listField: [
+							{
+								input: {
+									type: 'email',
+									id: 'input-id',
+									attr: {
+										'name': 'email',
+										'value': '',
+										'placeholder': 'E-mail',
+										'required': ''
+									}
+								}
+							},
+							
+						]
+					},
+					
+				]
+			})
+				
+
+mixin magnificPopupThank(data)
+	div(id="popup-thank" class="mfp-hide popup")
+		div(class="button popup-modal-close")
+			+icon({
+				name:'cross-popup', 
+				mod:'icon--stroke'
+			})
+		div(class="popup__wrap")
+			span(class="h2") Ваша заявка успешно отправлена!
+			span(class="txt-l") Наш специалист свяжется с вами в ближайшее время.
+
+
+

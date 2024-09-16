@@ -1,0 +1,28 @@
+extends template/layout
+include components/list-pages/list-pages
+
+block variables
+	- var title = 'Список страниц'
+
+block content
+	.container
+
+		h1 Список страниц
+
+		
+		+list-pages({
+		items:[
+			{
+			page: 'Дизайн',
+			href: 'design.html'
+			},
+			{
+			page: 'Главная',
+			href: 'main.html'
+			},
+			{
+			page: 'Тест',
+			href: 'test.html'
+			},
+		],
+		})

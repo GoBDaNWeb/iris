@@ -1,0 +1,304 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Оптовикам'
+	- var pageClass = 'wholesaler-page'
+	- var headerClass = 'header-purple'
+
+block content
+	.container
+		+breadcrumbs({ list: [ { text: 'Главная', href: 'main.html' }, { text: 'Оптовикам', } ] })
+	.wholesaler__hero
+		.container
+			.wholesaler__hero__inner
+				.wholesaler__hero_left
+					h1 Оптовикам
+					p С 2022 года компания активно и успешно развивает оптовое направление. Мы предлагаем оптовые закупки товаров собственных торговых марок для реализации в аптеках, супермаркетах, на маркетплейсах.
+					.btns
+						button.primary-btn(type='button') Оставить заявку
+				.wholesaler__hero_right
+					img(src='assets/images/example/wholesaler/hero.png', alt='')
+	.wholesaler__features
+		.container
+			.wholesaler__features__inner
+				h2 Consumed – это максимально комфортные условия работы:
+				.wholesaler__features__list
+					.wholesaler__features__item
+						img(src='assets/images/example/wholesaler/feature1.png', alt='')
+						p Отгрузка товара на склад от дистрибьюторов IRIS
+					.wholesaler__features__item
+						img(src='assets/images/example/wholesaler/feature2.png', alt='')
+						p IRIS контролирует РРЦ на всех территориях и маркетплейсах, обеспечивает отсутствие демпинга
+					.wholesaler__features__item
+						img(src='assets/images/example/wholesaler/feature3.png', alt='')
+						p Условия оплаты обсуждаются индивидуально с каждым клиентом
+					.wholesaler__features__item
+						img(src='assets/images/example/wholesaler/feature4.png', alt='')
+						p Возможность предоставления бонуса в цене или бэком
+					.wholesaler__features__item
+						img(src='assets/images/example/wholesaler/feature5.png', alt='')
+						p Push-проекты: предоставление дополнительных бонусов за выполнение плана
+					.wholesaler__features__item
+						img(src='assets/images/example/wholesaler/feature6.png', alt='')
+						p Специальные предложения для постоянных клиентов
+	.wholesaler__brends
+		.container
+			.wholesaler__brends__inner
+				h2 Наши бренды
+				.wholesaler__brends__list
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-1.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-2.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-3.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-4.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-5.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-6.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-7.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-8.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-9.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-10.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-11.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-12.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-13.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					a.brend__item(href='#')
+						.brend__item__pic
+							img(src='assets/images/example/brand/brand-14.png', alt='')
+						.brend__item__content
+							+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+	.wholesaler__benefits
+		.container
+			.wholesaler__benefits__inner
+				h2 Выгоды для аптечных сетей
+				.wholesaler__benefits__list
+					.col
+						.wholesaler__benefits__item
+							.image-wrapper
+								span 1
+								img(src='assets/images/example/wholesaler/benefit1.png', alt='')
+							p Доходность выше средней по категории.
+						.wholesaler__benefits__item
+							.image-wrapper
+								span 2
+								img(src='assets/images/example/wholesaler/benefit3.png', alt='')
+							p Консалтинг по продвижению СТМ – обучающие материалы, выкладка, работа с ассортиментом категории.
+						.wholesaler__benefits__item
+							.image-wrapper
+								span 3
+								img(src='assets/images/example/wholesaler/benefit5.png', alt='')
+							p Сбалансированный портфель – охвачены все основные категории.
+						.wholesaler__benefits__item
+							.image-wrapper
+								span 4
+								img(src='assets/images/example/wholesaler/benefit7.png', alt='')
+							p Федеральная программа по продвижению СТМ – продуктовые сайты брендов, SMM-каналы, взаимодействие с KOL и разработка комплексных коммуникаций с ЦА.
+					.col
+						.wholesaler__benefits__item
+							.image-wrapper
+								span 5
+								img(src='assets/images/example/wholesaler/benefit2.png', alt='')
+							p Адекватное розничное ценообразование.
+						.wholesaler__benefits__item
+							.image-wrapper
+								span 6
+								img(src='assets/images/example/wholesaler/benefit4.png', alt='')
+							p Зонтичные бренды – первостольнику легко запомнить.
+						.wholesaler__benefits__item
+							.image-wrapper
+								span 7
+								img(src='assets/images/example/wholesaler/benefit6.png', alt='')
+							p Бренды уже известны на территориях присутствия IRIS.
+						.wholesaler__benefits__item
+							.image-wrapper
+								span 8
+								img(src='assets/images/example/wholesaler/benefit8.png', alt='')
+							p Отсутствие планов по выборке СТМ и обязательного наличия всего ассортимента.
+	.wholesaler__conditions
+		.container
+			.wholesaler__conditions__inner
+				.wholesaler__conditions__item
+					img(src='assets/images/example/wholesaler/condition1.png', alt='')
+					.wholesaler__conditions__item_content
+						h3 Условия доставки
+						ul
+							li Отсутствие просроченной задолженности перед поставщиками
+							li Маржинальный бизнес не должен генерить убытки
+							li Ведение конкурентной борьбы только этическими методами
+							li Приверженность стратегическим целям IRIS
+				.wholesaler__conditions__item
+					img(src='assets/images/example/wholesaler/condition2.png', alt='')
+					.wholesaler__conditions__item_content
+						h3 Условия оплаты
+						ul
+							li В IRIS проделана большая работа по автоматизации бизнес-процессов, связанных с формированием и анализом ассортимента.
+							li Совместные усилия партнеров позволяют ускорить внедрение и повысить эффективность новых информационных технологий
+	.wholesaler__partners
+		.container
+			.wholesaler__partners__inner
+				h2 Партнёры
+				.wholesaler__partners__content
+					.wholesaler__partners__list
+						a.partner__item(href='#')
+							.partner__item__pic
+								span Лого
+							.partner__item__content
+								+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+						a.partner__item(href='#')
+							.partner__item__pic
+								span Лого
+							.partner__item__content
+								+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+						a.partner__item(href='#')
+							.partner__item__pic
+								span Лого
+							.partner__item__content
+								+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+						a.partner__item(href='#')
+							.partner__item__pic
+								span Лого
+							.partner__item__content
+								+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+						a.partner__item(href='#')
+							.partner__item__pic
+								span Лого
+							.partner__item__content
+								+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+						a.partner__item(href='#')
+							.partner__item__pic
+								span Лого
+							.partner__item__content
+								+button({ dopClass: 'button-go ', buttonText: 'Перейти на сайт', icon:{ name: 'arrow-button', mod: 'icon--stroke' } }) 
+					form.wholesaler__partners__form
+						h3 Запросить прайс-лист
+						.wholesaler__partners__form_inputs
+							input(type='text', placeholder='Ваше имя')
+							input(type='text', placeholder='Компания')
+							input(type='text', placeholder='E-mail')
+						.wholesaler__partners__form_bottom
+							button.primary-btn(type='submit') Отправить
+							p Заполняя данную форму вы соглашаетесь с политикой конфиденциальности сайта. <br>Сайт защищен Google recaptcha.
+								|
+								a(href='') Политика конфиденциальности
+								span &nbsp;и&nbsp;
+								<br>
+								a(href='') условия использования.
+	.wholesaler__tools
+		.container
+			.wholesaler__tools__inner
+				h2 Инструменты наращивания доли СТМ IRIS
+				.wholesaler__tools__list
+					.col
+						.wholesaler__tools__item
+							img(src='assets/images/example/wholesaler/tool3.png', alt='')
+							p Регулярное обучение
+						.wholesaler__tools__item
+							img(src='assets/images/example/wholesaler/tool2.png', alt='')
+							p Рекомендации первостольников через кассовый модуль
+						.wholesaler__tools__item
+							img(src='assets/images/example/wholesaler/tool1.png', alt='')
+							p Акции по сезонному ассортименту
+						.wholesaler__tools__item
+							img(src='assets/images/example/wholesaler/tool4.png', alt='')
+							p Мотивация первостольников
+					.col
+						.wholesaler__tools__item
+							img(src='assets/images/example/wholesaler/tool5.png', alt='')
+							p Рекомендации универсальных товаров СТМ в каждый чек
+						.wholesaler__tools__item
+							img(src='assets/images/example/wholesaler/tool6.png', alt='')
+							p Тестирование образцов продукции первостольниками
+						.wholesaler__tools__item
+							img(src='assets/images/example/wholesaler/tool7.png', alt='')
+							p Наличие в аптеках и выкладка
+						.wholesaler__tools__item
+							img(src='assets/images/example/wholesaler/tool8.png', alt='')
+							p Контроль соблюдения технологий продаж в аптеках
+	.wholesaler__reviews
+		.container
+			.wholesaler__reviews__inner
+				.wholesaler__reviews_top
+					h2 Отзывы партнёров
+				.wholesaler__reviews_slider
+					+sliderReviews({ items:[ { img:{ path: 'assets/images/example/wholesaler/person.png' }, name:'Константинопольская Александра Александровна', post:'Ведущий менеджер ООО “Название компании”', text: 'С 2022 года компания активно и успешно развивает оптовое направление. Мы предлагаем оптовые закупки товаров собственных торговых марок для реализации в аптеках, супермаркетах, на маркетплейсах.' }, { img:{ path: 'assets/images/example/wholesaler/person.png' }, name:'Константинопольская Александра Александровна', post:'Ведущий менеджер ООО “Название компании”', text: 'С 2022 года компания активно и успешно развивает оптовое направление. Мы предлагаем оптовые закупки товаров собственных торговых марок для реализации в аптеках, супермаркетах, на маркетплейсах.' }, { img:{ path: 'assets/images/example/wholesaler/person.png' }, name:'Константинопольская Александра Александровна', post:'Ведущий менеджер ООО “Название компании”', text: 'С 2022 года компания активно и успешно развивает оптовое направление. Мы предлагаем оптовые закупки товаров собственных торговых марок для реализации в аптеках, супермаркетах, на маркетплейсах.' }, { img:{ path: 'assets/images/example/wholesaler/person.png' }, name:'Константинопольская Александра Александровна', post:'Ведущий менеджер ООО “Название компании”', text: 'С 2022 года компания активно и успешно развивает оптовое направление. Мы предлагаем оптовые закупки товаров собственных торговых марок для реализации в аптеках, супермаркетах, на маркетплейсах.' }, ] })
+	.wholesaler__benefits-about
+		.container
+			.wholesaler__benefits-about__inner
+				h2 В чем выгода сотрудничества c IRIS?
+				.wholesaler__benefits-about__list
+					.wholesaler__benefits-about__item
+						img(src='assets/images/example/wholesaler/about1.png', alt='')
+						p Разработка продуктов специально для аптек
+					.wholesaler__benefits-about__item
+						img(src='assets/images/example/wholesaler/about2.png', alt='')
+						p Импортозамещение – производство на российских площадках
+					.wholesaler__benefits-about__item
+						img(src='assets/images/example/wholesaler/about3.png', alt='')
+						p Широкий ассортимент – охвачены все основные категории
+					.wholesaler__benefits-about__item
+						img(src='assets/images/example/wholesaler/about4.png', alt='')
+						p Легкий выбор в категории благодаря зонтичному бренду
+					.wholesaler__benefits-about__item
+						img(src='assets/images/example/wholesaler/about5.png', alt='')
+						p Оптимальное соотношение «цена–качество»
+	.wholesaler__alert
+		.container
+			.wholesaler__alert__inner
+				.wholesaler__alert__content
+					h3 Сделайте заказ <br> и получите бесплатную доставку
+					p Мы предлагаем оптовые закупки товаров собственных торговых марок.
+					button.primary-btn(type='button') Сделать заказ
+				img(src='assets/images/example/wholesaler/alert.png', alt='')
+				img.tab(src='assets/images/example/wholesaler/alert-tab.png', alt='')
+				img.mob(src='assets/images/example/wholesaler/alert-mob.png', alt='')

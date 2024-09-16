@@ -1,0 +1,33 @@
+mixin breadcrumbs(data)
+	//- атрибуты
+	- attr = data.attr || ''
+
+	div(class='breadcrumbs' class=data.dopClass)&attributes(attr)
+		each item in data.list
+			div(class='breadcrumbs__item' class= item.class)
+				//- Если есть ссылка
+				if (item.href)
+					a(class='breadcrumbs__link' href= item.href)= item.text
+				else
+					span(class='breadcrumbs__text')= item.text
+	//-
+		+breadcrumbs({
+			list: [
+				{
+					text: 'Главная',
+					href: 'main.html'
+				},
+				{
+					
+					text: 'Каталог',
+					href: '#',
+				},
+				{
+					text: 'Раздел',
+					href: '#',
+				},
+				{
+					text: 'Элемент',
+				}
+			]
+		})

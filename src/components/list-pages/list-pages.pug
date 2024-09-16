@@ -1,0 +1,7 @@
+mixin list-pages(data)
+
+	ol.list-pages
+		each item in data.items
+			li.list-pages__item
+				a(href=(item.href))
+					span= item.page

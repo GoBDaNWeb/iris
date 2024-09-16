@@ -1,0 +1,11 @@
+.list-pages{
+	//color: $color-text;
+	font-size: rem(22);
+	margin-top: rem(20);
+	&__item {
+		margin-bottom: rem(20);
+		a{
+			//color: $color-text;
+		}
+	}
+}

@@ -1,0 +1,406 @@
+extends template/layout
+include components/breadcrumbs/breadcrumbs
+include components/test/test
+
+block variables
+	- var title = 'Услуги'
+	- var pageClass = 'manufactures-page'
+	- var headerClass = 'header-purple'
+
+block content
+
+	.container 
+		+breadcrumbs({
+			list: [
+				{
+					text: 'Главная',
+					href: 'main.html'
+				},
+
+				{
+					text: 'Производителям',
+				
+				}
+
+			]
+		})
+
+
+	.hero-manufactures
+		.container 
+			.hero-manufacture__content
+				.hero-manufactures__offer
+					h1 Производителям
+					p Мы не только развиваем аптечные сети-партнёры, но и помогаем фармацевтическим компаниям проводить трейд-маркетинговые и рекламные мероприятия централизованно и по единым стандартам, что позволяет делать их эффективнее, результативнее и успешнее!
+					.hero-manufactures__offer__bottom
+						button.primary-btn(type="button") Заявка на сотрудничество 
+						a.pdf(href="")
+							span &nbsp;Скачать<br>&nbsp;презентацию
+
+				img.hero-manufactures__pic(src="assets/images/example/hero-pic-1.png", alt="")
+
+	.maintenance
+		.section-header 
+			.container 
+				h2.h2 Экспертное сопровождение для производителей от лидеров рынка
+				p Выберите услуги, который необходимы именно вам и мы поможем вам увеличить объем продаж
+		.container 
+			.maintenance__block 
+				h3 Работа с ассортиментом
+				.maintenance__item 
+					img(src="assets/images/example/maintenance/pic1.png", alt="")
+					.maintenance__item__content 
+						h4 Управление ассортиментом аптек
+						p Для эффективного управления запасами мы используем Symphony (Симфони) - специализированное программное обеспечение, основанное на ТОС (теории ограничений).
+						ul 
+							li Автоматическое управление товарными матрицами в соответствии с заданным алгоритмом
+							li Поддержание оптимального товарного запаса с учётом оборачиваемости и частоты поставки
+							li Гибкость и скорость реакции на изменение спроса
+							li Возможность индивидуального подхода при проведении акций
+						button.primary-btn(type="button") Заказать управление 
+				
+				.maintenance__item 
+					img(src="assets/images/example/maintenance/pic2.png", alt="")
+					.maintenance__item__content 
+						h4 Визиты представителей в аптеки
+						p В аптеках IRIS действует система электронного учёта визитов медицинских представителей, реализованная в формате электронных карт (визиты на кассовом модуле).
+						ul 
+							li Визит осуществляется с помощью пластиковой карты
+							li Время визита – 10 минут
+							li Оценка первостольником качества визита
+							li Получение отчетов по визитной активности
+						button.primary-btn(type="button") Заказать визит 
+
+				.maintenance__item 
+					img(src="assets/images/example/maintenance/pic3.png", alt="")
+					.maintenance__item__content 
+						h4 Обучение
+						h5 Мы предлагаем нашим партнёрам различные опции по обучению:
+						ul 
+							li Дистанционное обучение сотрудников на учебной площадке сети через вебинар или путем предоставления записи/презентации учебного материала
+							li Формат off-line. Запись обучения и тест доступны всем сотрудникам первого стола сети в период обучения
+
+						h5 Преимущества обучения в IRIS:
+						ul 
+							li Охват до 100% сотрудников
+							li До 4000 участников процесса
+							li Отчетность по итогам обучения
+						button.primary-btn(type="button") Записаться на обучение 
+
+				.maintenance__item 
+					img(src="assets/images/example/maintenance/pic4.png", alt="")
+					.maintenance__item__content 
+						h4 Промо-мероприятия
+						p Спеццена - временное снижение цены на определенный ассортимент товаров. Длительность акции: 1 месяц.
+						ul 
+							li Выкладка товара-участника осуществляется в категории в торговом зале, оформляется крупными ценниками и обозначением СПЕЦЦЕНА
+							li Информационная поддержка: сайты сетей, социальные медиа, Email–рассылка, POSM в аптеках, информирование фармацевтами
+
+						p Подарок при покупке - покупатель получает гарантированный подарок при покупке товара – участника акции.
+						p Длительность акции: 1 месяц
+						p Производитель получает информационную поддержку через корпоративный сайт, социальные медиа, Email–рассылку, POSM в аптеках, информирование фармацевтами
+						p Реклама на мониторах - размещение рекламных материалов по проводимым в аптеках акциям на мониторах, размещенных в прикассовых зонах.
+						p Для производителей доступны и другие форматы маркетинговых активностей.
+						
+						+button({
+							dopClass: 'button-more button-50 txt-s',
+							href: '#',
+							buttonText: 'Подробнее',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						})
+
+			.maintenance__block 
+				h3 Ecommerce&Digital
+				.maintenance__item 
+					img(src="assets/images/example/maintenance/pic5.png", alt="")
+					.maintenance__item__content 
+						h4 Digital-продвижение
+						p На текущий момент партнёрство IRIS занимает  3 место по объему выручки online в сегменте аптек. В пул партнёрства входят 8 сайтов и 6 мобильных приложений с общим высококонверсионным трафиком около 4 млн.
+						ul 
+							li Оптимизация поисковой выдачи на сайтах и в МП
+							li Размещение баннеров на главной и внутренних страницах сайтов и мобильных приложений аптечных сетей
+							li Рассылки sms, e-mail, push
+							li Размещение в социальных сетях
+							li Другие активности по запросу
+						button.primary-btn(type="button") Заказать продвижение 
+				
+				.maintenance__item 
+					img(src="assets/images/example/maintenance/pic6.png", alt="")
+					.maintenance__item__content 
+						h4 Ecommerce
+						p Мы предлагаем продвижение ваших продуктов на онлайн-площадках аптечных сетей – партнеров IRIS. IRIS&nbsp;занимает 9 место в ТОР20 компаний e-com сегмента российской фармацевтической розницы по итогам 2022 года по версии RNC Pharma. На сегодняшний день у нас функционирует 16 онлайн-площадок: 8 сайтов и 8 мобильных приложений.
+					
+						+button({
+							dopClass: 'button-more button-50 txt-s',
+							href: '#',
+							buttonText: 'Подробнее',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						})
+
+	.marketplace 
+		.container
+			.marketplace__inner 
+				img.marketplace__pic(src="assets/images/example/maintenance/martketplace-pic.png", alt="")
+				.marketplace__content.maintenance__item__content 
+					h3 Выход на маркетплейсы
+					p Сейчас IRIS активно развивает сотрудничество с фармацевтическими производителями для вывода их ОТС-препаратов на маркетплейсы. Мы помогаем производителям выйти на маркетплейсы у которых небольшой ассортимент и нет собственных ресурсов.
+					ul 
+						li Свой опыт и компетенции работы на маркетплейсах
+						li Привычная для вас схема работы через дистрибьютера
+						li У нашего магазина очень высокий уровень доверия. Рейтинг наших товаров по оценке покупателей — 4,8 из 5
+						li Собственные склады, общая площадь которых более 60 тыс. м2.
+					+button({
+							dopClass: 'button-more button-50 txt-s',
+							href: '#',
+							buttonText: 'Подробнее',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						})
+
+
+
+	div.services-consumed.services-consumed-2.services-consumed-3
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Выгоды сотрудничества
+		.container 
+			.section-body(data-delighter="start:0.95;end:0.95;")
+				.services-consumed__left
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-6.png", alt="")
+						.services__consumed__point__content
+							p Централизованная маркетинговая деятельность на федеральном уровне
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-7.png", alt="")
+						.services__consumed__point__content
+							p Управление товарными запасами
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-8.png", alt="")
+						.services__consumed__point__content
+							p Единый контакт для связи при реализации маркетинговых и рекламных кампаний
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-9.png", alt="")
+						.services__consumed__point__content
+							p Своевременное предоставление отчетности
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-10.png", alt="")
+						.services__consumed__point__content
+							p Централизованное управление ассортиментом
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-11.png", alt="")
+						.services__consumed__point__content
+							p Максимизация выполнения маркетинговых условий
+
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-12.png", alt="")
+						.services__consumed__point__content
+							p Лучшие условия для ввода продукта в ассортиментную матрицу
+					.services__consumed__point
+						img(src="assets/images/example/services-consumed/i-13.png", alt="")
+						.services__consumed__point__content
+							p Наличие учебных классов с сильными тренерами, имеющими 10-летний профессиональный стаж
+				.services-consumed__right
+					img(src="assets/images/example/services-consumed/pic-2.png", alt="")
+					
+	.geography 
+		.container 
+			.geography__inner
+				.geography__text 
+					h2 География аптек
+					p С нашей стороны возможна индивидуальная проработка рекламной кампании в соответствии с целями партнёра! 
+
+				img.geography__map(src="assets/images/example/geography.svg", alt="")
+
+
+	div.integration
+		div.section-header(data-delighter="start:0.95;end:0.95;")
+			div.container
+				h2.h2 Аптечные сети - партнеры
+				
+
+		.container
+			.intergration__body 
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-7.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Фармакопейка',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-8.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Твой доктор',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-9.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Здесь аптека',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-1.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Аптечество',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-2.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'На Батуевской',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-6.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Аптека фармани',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-5.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Городская аптека',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-4.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Новая аптека',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/partners-logo-3.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Аптека эконом',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/shah.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Шах аптека',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 
+
+				.integration__item 
+					.intergration__item__pic
+						a(href="#") 
+						img(src="assets/images/example/partners/minicen.png", alt="")
+					a(href="#")
+						+button({
+							dopClass: 'button-go ',
+							buttonText: 'Аптека миницен',
+							icon:{
+								name: 'arrow-button',
+								mod: 'icon--stroke'
+							}
+						}) 	
+	
+	.sotrud 
+		.container 
+			.sotrud__inner 
+				.sotrud__inner__content 
+					h2 Мы готовы к сотрудничеству!
+					p С нашей стороны возможна индивидуальная проработка рекламной кампании в соответствии с целями партнёра! 
+					button.primary-btn(type="button") Заказать
+				picture 
+					source(media="(max-width: 700px)", srcset="assets/images/example/sotrud-pic-mob.png")
+					source(media="(max-width: 1160px)", srcset="assets/images/example/sotrud-pic-tablet.png")
+					img(src="assets/images/example/sotrud-pic.png", alt="")
+					
+
+			.sotrud__warning В связи с участившимися случаями мошенничества, мы не рассматриваем предложения без документов качества (СГР, РУ, ДС). Сотрудничаем только по договору поставки за безналичный расчет.
+
+	
+	

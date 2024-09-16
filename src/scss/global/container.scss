@@ -1,0 +1,14 @@
+@import '../helpers/_functions';
+$container-padding: 50px;
+$container-padding-small: 20px;
+
+.container {
+	margin: 0 auto;
+	max-width: 1600px;
+	width: 100%;
+	padding: 0 $container-padding;
+
+	@include mq('desktop-small') {
+		padding: 0 $container-padding-small;
+	}
+}

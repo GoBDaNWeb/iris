@@ -1,0 +1,176 @@
+mixin radioBase(data)
+	- атрибуты
+	- attr = data.attr || ''
+
+	- fieldName = data.fieldName
+
+	div(class="form-field" data=data.classRow)
+		if (data.title)
+			span(class="field-title")= data.title
+		each item in data.listRadio
+			
+			div(class="check__wrap")
+				input(
+					type="radio" 
+					id=item.id
+					class="radio-base" class=data.dopClass
+					name=typeof data.name === "undefined" ? item.type: data.name
+					value=typeof item.value === "undefined" ? "" : item.value )&attributes(item.attr)
+				label(for=item.id)
+					span
+					span= item.labelText
+
+//-
+	
+	+radioBase({
+		name:'radio-name',
+		title: 'Что вы хотите получать?',
+		listRadio: [
+			{
+				id: 'radio-1',
+				value:'radio-1',
+				labelText: 'Напоминания из календаря приёма'
+			},
+			{
+				id: 'radio-2',
+				value:'radio-2',
+				labelText: 'Напоминания из календаря приёма'
+			},
+		]
+	})
+
+mixin radioListTag(data)
+	- attr = data.attr || ''
+	div(class="list-tag-radio")
+		each item in data.items
+			div(class="input-button-green")
+				input(name=data.name type="radio" value=item.value id=item.id)&attributes(item.attr)
+				label(for=item.id )
+					span= item.text
+//-				
+	+radioListTag({
+		name: 'sort-price',
+		items:[
+			{
+				id: 'ascending-price',
+				value: 'ascending-price',
+				text: 'Возрастанию цены',
+				attr:{
+					'checked':''
+				}
+			},
+			{
+				id: 'ascending-price-1',
+				value: 'ascending-price-1',
+				text: 'Убыванию цены',
+			},
+		]
+		
+	})
+
+mixin typeList(data)
+	- attr = data.attr || ''
+	div(class="type-list")
+		span(class="type-list__ttl")= data.title
+		each item in data.items
+			div(class="input-button-gold")
+				input(name=data.name type="radio" value=item.value id=item.id)&attributes(item.attr)
+				label(for=item.id ) !{item.img}
+					span= item.text
+
+//-				
+	+typeList({
+		name: 'sort-price',
+		items:[
+			{
+				id: 'ascending-price',
+				value: 'ascending-price',
+				text: 'Возрастанию цены',
+				img: `<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+						<path d="M3 0L0.113249 5L5.88675 5L3 0ZM2.5 4.5L2.5 10L3.5 10L3.5 4.5L2.5 4.5Z" fill=""/>
+					</svg>`,
+				attr:{
+					'checked':''
+				}
+			},
+			{
+				id: 'ascending-price-1',
+				value: 'ascending-price-1',
+				text: 'Убыванию цены',
+				img: `<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+						<path d="M3 0L0.113249 5L5.88675 5L3 0ZM2.5 4.5L2.5 10L3.5 10L3.5 4.5L2.5 4.5Z" fill=""/>
+					</svg>`
+			},
+		]
+		
+	})
+
+mixin sortBy(data)
+	- attrMin = data.attrMin || ''
+	- attrMax = data.attrMax || ''
+	div(class="sort-by")
+		span(class="sort-by__ttl")= data.title
+		each item in data.items
+			div(class="sort-by__item")
+				span= item.text
+				input(name=item.name type="radio" value=item.value id=item.idMax)&attributes(item.attrMax)
+				label(for=item.idMax ) 
+					<svg width="22" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon--stroke icon-sort"><path d="M1 12.973c5.178.782 9.23 4.885 9.962 10.09l.038.27.038-.27c.733-5.205 4.784-9.308 9.962-10.09m-10 9.713V0" stroke=""/></svg>
+				input(name=item.name type="radio" value=item.value id=item.idMin)&attributes(item.attrMin)
+				label(for=item.idMin ) 
+					<svg width="22" height="25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon--stroke icon-sort"><path d="M1 11.361c5.178-.782 9.23-4.885 9.962-10.09l.038-.27.038.27c.733 5.205 4.784 9.308 9.962 10.09M11 1.648v22.686" stroke=""/></svg>
+
+//-				
+	+sortBy({
+		name: 'sort-price',
+		items:[
+			{
+				idMin: 'ascending-price',
+				idMax: 'ascending-price',
+				value: 'ascending-price',
+				text: 'Возрастанию цены',
+				attrMin:{
+					'':''
+				}
+			},
+			{
+				idMin: 'ascending-price-1',
+				idMax: 'ascending-price-1',
+				value: 'ascending-price-1',
+				text: 'Убыванию цены',
+				attrMax:{
+					'checked':''
+				}
+			},
+		]
+		
+	})
+
+mixin radioList(data)
+	- attr = data.attr || ''
+	div(class="list-content")
+		each item in data.items
+			div(class="list-content__item")
+				input(name=data.name type="radio" value=item.value id=item.id)&attributes(item.attr)
+				label(for=item.id )
+					span= item.text
+//-				
+	+radioListTag({
+		name: 'sort-price',
+		items:[
+			{
+				id: 'ascending-price',
+				value: 'ascending-price',
+				text: 'Возрастанию цены',
+				attr:{
+					'checked':''
+				}
+			},
+			{
+				id: 'ascending-price-1',
+				value: 'ascending-price-1',
+				text: 'Убыванию цены',
+			},
+		]
+		
+	})

@@ -1,0 +1,101 @@
+
+
+.hidden {
+	display: none !important;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-5 {
+	margin-bottom: 5px;
+}
+
+.mb-15 {
+	margin-bottom: 15px;
+}
+
+.mb-40 {
+	margin-bottom: 40px !important;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+.mt-15 {
+	margin-top: 15px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.hide-desk-desktop-tiny {
+	@include mq-min('desktop-tiny') { //min-width 768px
+		display: none !important;
+	}
+}
+
+.hide-desktop-tiny {
+	@include mq('desktop-tiny') { //max-width 768px
+		display: none !important;
+	}
+}
+
+
+.hide-desk-tablet {
+	@include mq-min('tablet') { //min-width 768px
+		display: none !important;
+	}
+	
+}
+.hide-desk-phone {
+	@include mq-min('phone') { //min-width 768px
+		display: none !important;
+	}
+}
+.hide-desk-phone-small {
+	@include mq-min('phone-small') { //min-width 768px
+		display: none !important;
+	}
+}
+
+.hide-tablet {
+	@include mq('tablet') { //max-width 768px
+		display: none !important;
+	}
+}
+.hide-phone {
+	@include mq('phone') {
+		display: none !important;
+	}
+}
+.hide-phone-small {
+	@include mq('phone-small') {
+		display: none !important;
+	}
+}
+
+.radius-10 {
+	border-radius: 10px;
+	overflow: hidden;
+}
+.radius-20 {
+	border-radius: 20px;
+	overflow: hidden;
+}
+.radius-15 {
+	border-radius: 15px;
+	overflow: hidden;
+}
+

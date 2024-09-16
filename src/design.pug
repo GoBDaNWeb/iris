@@ -1,0 +1,406 @@
+extends template/layout
+
+block content
+	main
+		.container.design
+			
+			section
+				h1.text-center Заголовки
+				h1 H1 - Заголовок
+				h2 H2 - Заголовок
+				h3 H3 - Заголовок
+				h4 H4 - Заголовок
+			section
+				h1.text-center Текст
+				.base  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+				.semiBold $font-VelaSansSemiBold - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+				.bold $font-VelaSansBold - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+				.txt-m .txt-m - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+				.txt-s .txt-s - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+				.txt-xs .txt-xs - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+				.tag .tag - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+			section
+				h2.text-center Цвета
+				div.color-wrap
+					h4 Фон
+					.design__background.design__background-1
+						div.color-round
+						span.color-variables  $grey-back
+					.design__background.design__background-2
+						div.color-round
+						span.color-variables  $violet-back
+					.design__background.design__background-3
+						div.color-round
+						span.color-variables  $blue-back
+					.design__background.design__background-4
+						div.color-round
+						span.color-variables  $green-back
+
+				div.color-wrap
+					h4 Контент
+					.design__content.design__content-1
+						div.color-round
+						span.color-variables  $color-white
+					.design__content.design__content-2
+						div.color-round
+						span.color-variables  $color-black
+					.design__content.design__content-3
+						div.color-round
+						span.color-variables  $color-violet
+					.design__content.design__content-4
+						div.color-round
+						span.color-variables  $color-violet-dark
+					.design__content.design__content-5
+						div.color-round
+						span.color-variables  $grey-lines
+			section 
+				h1.text-center Кнопки
+				div.wrap
+					+button({
+						dopClass: 'button-more button-50 txt-s',
+						href: '#',
+						buttonText: 'Подробнее',
+						icon:{
+							name: 'arrow-button',
+							mod: 'icon--stroke'
+						}
+					})
+			section 
+				h2.text-center Детали
+				div.wrap
+					+lang(data)
+					.card
+						+hiddenItem({
+							list:[
+								{
+									text:'пункт 1'
+								},
+								{
+									text:'пункт 1'
+								},
+								{
+									text:'пункт 2'
+								},
+								{
+									text:'пункт 3'
+								},
+								{
+									text:'пункт 4'
+								},
+								{
+									text:'пункт 5'
+								},
+								{
+									text:'пункт 6'
+								},
+								{
+									text:'пункт 7'
+								},
+								{
+									text:'пункт 8'
+								},
+								{
+									text:'пункт 9'
+								},
+								{
+									text:'пункт 10'
+								},
+							]
+						})
+					.card
+						+hiddenItem({
+							list:[
+								{
+									text:'пункт 1'
+								},
+								{
+									text:'пункт 1'
+								},
+								{
+									text:'пункт 2'
+								},
+								{
+									text:'пункт 3'
+								},
+								{
+									text:'пункт 4'
+								},
+								{
+									text:'пункт 5'
+								},
+								{
+									text:'пункт 6'
+								},
+								{
+									text:'пункт 7'
+								},
+								{
+									text:'пункт 8'
+								},
+								{
+									text:'пункт 9'
+								},
+								{
+									text:'пункт 10'
+								},
+							]
+						})
+			section 
+				h2.text-center Элементы
+				div.wrap
+					+cardType1({
+						img:{
+							path:'assets/images/example/top-main/top-main-adv-1.png',
+							/*dopClass:'card-type-1__img'*/
+						},
+						value: 'значение',
+						desc: 'text'
+					})
+					+cardType2({
+						icon:{
+							name:'main-about-1',
+							mod:''
+						},
+						title: 'R&D',
+						desc: 'в состав IRIS входит ООО “КОНСУМЕД”, производитель инновационных препаратов, включающей в себя: команду разработчиков и успешные СТМ.'
+					})
+					+cardType3({
+						count: '01',
+						img:{
+							path: 'assets/images/example/services-main/services-iris-1.png'
+						},
+						title: 'Производителям',
+						list: [
+							{
+								txt:'Маркетинговые контракты участниками партнерства ИРИС'
+							},
+							{
+								txt:'E-commerce'
+							},
+							{
+								txt:'Производство СТМ'
+							}
+						],
+						txt: '<p>Вступление в ИРИС: повышение маржинальности за счет доступа к маркетинговым контрактам ИРИС и портфелю ВМТ (высокомаржинальные товары) ИРИС</p>'
+					})
+					+cardType4({
+						img:{
+							path: 'assets/images/example/services-main/services-iris-1.png'
+						},
+						title: 'БАД',
+						content:[
+							{
+								subtitle:'Irispharma',
+								hiddenItem:{
+									list:[
+										{
+											text:'гастроэнтерология'
+										},
+										{
+											text:'опорно-двигательный аппарат'
+										},
+										{
+											text:'витаминно-минеральные комплексы'
+										},
+										{
+											text:'поддержка иммунитета'
+										},
+										{
+											text:'коррекция веса'
+										},
+										{
+											text:'гастроэнтерология'
+										},
+										{
+											text:'опорно-двигательный аппарат'
+										},
+										{
+											text:'витаминно-минеральные комплексы'
+										},
+										{
+											text:'поддержка иммунитета'
+										},
+										{
+											text:'коррекция веса'
+										},
+									]
+								},
+								list: [
+									{
+										text:'гастроэнтерология'
+									},
+									{
+										text:'опорно-двигательный аппарат'
+									},
+									{
+										text:'витаминно-минеральные комплексы'
+									},
+									{
+										text:'поддержка иммунитета'
+									},
+									{
+										text:'коррекция веса'
+									},
+								],
+							},
+						]
+					})
+					+cardBrand({
+						href:'#',
+						img:{
+							path:'assets/images/example/brand/brand-1.png'
+						}
+					})
+			section.section-new
+				div.container
+					h2.text-center Новинки
+					+sliderNew({
+						items:[
+							{
+								img:{
+									path: 'assets/images/example/new/new-1.png'
+								},
+								name:'Бетулин с цетрарией',
+								desc:'Irispharma'
+							},
+							{
+								img:{
+									path: 'assets/images/example/new/new-1.png'
+								},
+								name:'Бетулин с цетрарией',
+								desc:'Irispharma'
+							},
+							{
+								img:{
+									path: 'assets/images/example/new/new-1.png'
+								},
+								name:'Бетулин с цетрарией',
+								desc:'Irispharma'
+							},
+							{
+								img:{
+									path: 'assets/images/example/new/new-1.png'
+								},
+								name:'Бетулин с цетрарией',
+								desc:'Irispharma'
+							},
+							{
+								img:{
+									path: 'assets/images/example/new/new-1.png'
+								},
+								name:'Бетулин с цетрарией',
+								desc:'Irispharma'
+							},
+							{
+								img:{
+									path: 'assets/images/example/new/new-1.png'
+								},
+								name:'Бетулин с цетрарией',
+								desc:'Irispharma'
+							},
+						]
+					})
+					h2.text-center Новости
+					+sliderNews({
+						items:[
+							{
+								href: '#',
+								img:{
+									path: 'assets/images/example/news/news-preview-1.png'
+								},
+								data:'19.10.2023',
+								preview:'IRIS принял участие в 21-м Аптечном саммите'
+							},
+							{
+								href: '#',
+								img:{
+									path: 'assets/images/example/news/news-preview-2.png'
+								},
+								data:'19.10.2023',
+								preview:'Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах'
+							},
+							{
+								href: '#',
+								img:{
+									path: 'assets/images/example/news/news-preview-3.png'
+								},
+								data:'19.10.2023',
+								preview:'IRIS принял участие в 21-м Аптечном саммите'
+							},
+							{
+								href: '#',
+								img:{
+									path: 'assets/images/example/new/new-1.png'
+								},
+								data:'19.10.2023',
+								preview:'Партнерство IRIS рассказало об успешном опыте продаж безрецептурных лекарств на маркетплейсах'
+							},
+						]
+					})
+					section.section-advantage
+						+sliderAdvantage({
+							items:[
+								{
+									href:'#',
+									title: 'Заголовок',
+									preview: 'Анонс',
+									img:{
+										path: 'assets/images/example/new/new-1.png'
+									}
+								},
+								{
+									href:'#',
+									title: 'Заголовок',
+									preview: 'Анонс',
+									img:{
+										path: 'assets/images/example/new/new-1.png'
+									}
+								},
+							]
+							
+						})
+			section
+				div.container
+					h2.text-center Формы
+					+form({
+						dopClass: 'form-call',
+						submitValue:'Отправить',
+						policy:'Y',
+						listRow:[
+							
+							{
+								listField: [
+									{
+										input: {
+											id: 'input-id',
+											attr: {
+												'name': 'name',
+												'value': '',
+												'placeholder': 'Ваше имя',
+											}
+										}
+									},
+									
+								]
+							},
+							{
+								listField: [
+									{
+										input: {
+											type: 'email',
+											id: 'input-id',
+											attr: {
+												'name': 'email',
+												'value': '',
+												'placeholder': 'E-mail',
+												'required': ''
+											}
+										}
+									},
+									
+								]
+							},
+							
+						]
+					})
+			

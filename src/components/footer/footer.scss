@@ -1,0 +1,74 @@
+.footer {
+    padding-top: 100px;
+    border-top: 1px solid $grey-lines;
+    @include mq('desktop-tiny') {
+        padding-top: 62px;
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: 34% 66%;
+        .col{
+            &:first-child {
+                display: flex;
+                flex-direction: column;
+            }
+            &:last-child {
+                display: grid;
+                grid-template-columns: repeat(3, calc(100% / 3 - 45px * 2 / 3));
+                @include mq('tablet') {
+                    grid-template-columns: repeat(2, calc(50% - 45px / 2));
+                    grid-auto-flow: column;
+                    grid-template-rows: repeat(2, auto);
+                }
+                
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        color: $color-grey;
+    }
+    .footer-menu {
+        &:nth-child(2){
+            @include mq('tablet') {
+                margin-top: 10px;
+            }
+        }
+    }
+    .popup-button {
+        padding: 0 25px;
+    }
+    .logo-link {
+        margin-bottom: 50px;
+        .icon-svg {
+            width: 106px;
+            height: 36px;
+        }
+        span {
+            font-size: 11px;
+        }
+    }
+    .popup-button {
+        align-self: flex-start;
+        margin: 10px 0 20px;
+        font-size: 16px;
+    }
+    .link-mail {
+        font-size: 16px;
+    }
+    .copy {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            width: 353px;
+            height: 1px;
+            background: $grey-lines;
+        }
+    }
+}

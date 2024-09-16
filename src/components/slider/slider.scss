@@ -1,0 +1,304 @@
+
+.slider-desc {
+	&-container {
+		position: relative;
+		width: 100%;
+	}
+
+	&-container .item {
+		outline: none;
+		//padding: 50px 0;
+		position: relative;
+	}
+	.slick-slide {
+		&:not(.slick-active) {
+			height: 0;
+		}
+	}
+
+}
+.slick-list {
+	margin: 0 -15px;
+	@include mq('desktop-tiny') {
+		margin: 0 -10px;
+	}
+	
+}
+.slick-slide {
+	padding: 0 15px;
+	@include mq('desktop-tiny') {
+		padding: 0 10px;
+	}
+	
+}
+.slider-arrow-wrap {
+	display: inline-flex;
+	//justify-content: flex-end;
+	column-gap: 10px;
+	width: auto;
+	margin-left: auto;
+	margin-bottom: 48px;
+	margin-top: -106px;
+	@include mq('desktop-tiny') {
+		margin-top: -68px;
+		margin-bottom: 36px;
+	}
+}
+.slick-arrow {
+	position: relative;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	background: $color-violet;
+	z-index: 2;
+	transition: $transition;
+	cursor: pointer;
+	@include mq('desktop-tiny') {
+		width: 35px;
+		height: 35px;
+	}
+	&:hover, &:focus {
+		background: $color-violet-dark;
+		
+	}
+	&::before {
+		display: none;
+	}
+	&.slick-next {
+		right: 0;
+		transform: unset;
+	}
+
+	&.slick-prev {
+		left: 0;
+		transform: unset;
+		.icon-svg {
+			transform: rotate(180deg);
+		}
+	}
+	.icon-svg {
+		color: $color-white;
+	}
+	
+}
+
+.slick-dots {
+
+	bottom: -40px;
+	font-size: 0;
+	@include mq('phone') {
+		width: 100%;
+	}
+	li {
+		width: 10px;
+		height: 10px;
+		button {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			border-radius: 50%;
+			border: 1px solid $color-violet;
+			&::before {
+				display: none;
+			}
+		}
+		&.slick-active {
+			button {
+				background: $color-violet;
+			}
+			
+		}
+	}
+}
+.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+
+.slider-new {
+	@include mq('phone') {
+		margin-top: 36px;
+	}
+	&__img {
+		width: 100%;
+		height: 258px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 25px;
+		border: 1px solid $grey-lines;
+		@include mq('desktop-tiny') {
+			padding: 15px;
+			height: 122px;
+		}
+		img {
+			max-height: 100%;
+		}
+	}
+	&__name {
+		display: block;
+		margin-top: 24px;
+		@include mq('desktop-tiny') {
+			margin-top: 18px;
+		}
+	}
+	&__desc {
+		display: block;
+	}
+	.slick-slide {
+		
+		@include mq('phone') {
+			width: 263px ;
+		}
+	}
+	.slick-list {
+		@include mq('phone') {
+			margin: 0 -20px;
+			padding-left: 10px;
+		}
+	}
+	
+}
+
+.slider-news {
+	@include mq('phone') {
+		margin-top: 36px;
+	}
+
+	&__img {
+		width: 100%;
+		aspect-ratio: 3 / 2;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__data {
+		display: block;
+		margin: 24px 0 16px;
+		color: $color-grey;
+		@include mq('desktop-tiny') {
+			margin: 20px 0 10px;
+		}
+	}
+	&__preview {
+		display: block;
+		max-width: 75%;
+		text-overflow: ellipsis; // для mac
+		max-height: calc(24px * 1.26 * 4); // для mac
+		display: -webkit-box; 
+			-webkit-line-clamp: 4; // количество видимых строк
+			-webkit-box-orient: vertical;
+		font-size: 24px;
+		line-height: 126%;
+		overflow: hidden;
+		@include mq('desktop-tiny') {
+			max-height: calc(16px * 1.4 * 4); // для mac
+			font-size: 16px;
+			line-height: 140%;
+		}
+	}
+	.slick-slide {
+		@include mq('phone') {
+			width: 320px ;
+		}
+	}
+}
+
+.slider-advantage {
+	&__item {
+		
+		width: 1200px;
+		@include mq('desktop-tiny') {
+			width: auto;
+		}
+		& > a {
+			display: flex;
+			@include mq('phone') {
+				flex-direction: column;
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+		height: 450px;
+		padding: 84px 100px 100px;
+		background: $color-white;
+		@include mq('desktop-tiny') {
+			width: 50%;
+			height: 300px;
+			padding: 45px 30px ;
+		}
+		@include mq('phone') {
+			width: 100%;
+			height: 280px;
+		}
+	}
+	&__img {
+		width: 40%;
+		height: 450px;
+		@include mq('desktop-tiny') {
+			width: 50%;
+			height: 300px;
+		}
+		@include mq('phone') {
+			width: 100%;
+			height: 280px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__ttl {
+		margin-top: 0;
+		margin-bottom: 10px;
+		color: $color-black;
+		@include mq('desktop-tiny') {
+			font-size: 28px;
+			line-height: 115%;
+		}
+	}
+	&__preview {
+		display: block;
+		text-overflow: ellipsis; // для mac
+		max-height: calc(18px * 1.3 * 1); // для mac
+		display: -webkit-box; 
+			-webkit-line-clamp: 1; // количество видимых строк
+			-webkit-box-orient: vertical;
+		overflow: hidden;
+		@include mq('desktop-tiny') {
+			max-height: calc(16px * 1.4 * 1); // для mac
+			font-size: 16px;
+			line-height: 140%;
+		}
+	}
+	.slick-list {
+		margin-right: -40px;
+		@include mq('desktop-tiny') {
+			margin-right: -10px;
+		}
+	}
+	.button {
+		max-width: 190px;
+		margin-top: auto;
+	}
+	.slick-dots {
+		.slick-active {
+			button {
+				background: $color-white;
+			}
+			
+		}
+		li {
+			button {
+				border-color: $color-white;
+			}
+			
+		}
+	}
+}
+

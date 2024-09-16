@@ -1,0 +1,40 @@
+{
+  "name": "supergulp",
+  "version": "1.0.0",
+  "description": "Описание",
+  "main": "index.js",
+  "author": "EasyCoders.ru",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/register": "^7.13.14",
+    "babelify": "^10.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-bro": "^2.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-image": "^6.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-webserver": "^0.9.1",
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "@prettier/plugin-pug": "^2.5.1",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-svgmin": "^4.1.0",
+    "prettier": "^2.8.8"
+  }
+}

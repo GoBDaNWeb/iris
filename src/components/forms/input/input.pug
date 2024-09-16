@@ -1,0 +1,114 @@
+mixin input(data)
+	//- атрибуты
+	- attr = data.attr || ''
+	- type = data.type || 'text'
+	- fieldName = data.fieldName
+	- let ruble = "&#8381;";
+	- let id = data.id
+
+	div(class="form-field" class=data.dopClass)
+		if(data.fieldTitle)
+			span(class="field__title")= data.fieldTitle
+			//-input(
+				id= data.id
+				class=`form__field form__field--${fieldName} input`
+				class=data.inputClass
+				type= type
+				name=typeof data.name === "undefined" ? data.type: data.name
+				value=typeof data.value === "undefined" ? "" : data.value
+				placeholder=typeof data.placeholder === "undefined" ? "" : data.placeholder )&attributes(attr)
+		input(
+			id=`${id}`
+			class=`input`
+			class=data.inputClass
+			type= type
+			name=typeof data.name === "undefined" ? data.type: data.name
+			value=typeof data.value === "undefined" ? "" : data.value
+			placeholder=typeof data.placeholder === "undefined" ? "" : data.placeholder )&attributes(attr)
+		//-div(class=`form-message-fild form-message--${fieldName}`)
+		div(class=`form-message-fild `)
+		if(data.label)
+			label(for=`#${id}` class="input__label")= data.label.labelText
+				if(data.unit)
+					span(class="input__unit") !{data.unit}
+				
+	//- Вызов
+		input: {
+			dopClass: 'dopClass',
+			fieldTitle: 'Заголовок',
+			id: 'input-id',
+			fieldName: 'other',
+			name: 'name',
+			value: 'значение',
+			placeholder: 'текст подсказка',
+			labelFor: 'input-id',
+			labelText: 'label text'
+		}
+
+	//-
+		<div class="field-wrap">
+			<span class="field__title">Заголовок вне поля</span>
+			<input type="text" id="id-1" name="user_name" class="form__field form__field--name" placeholder="Ваше имя">
+			<div class="form-message-fild form-message--name"></div>
+			<label for="id-1" class="input__label">текст подсказка поля</label>
+		</div>
+		
+	//-
+		div(class=`input__wrap`)
+			div(class=`input__container`)
+				input(
+				type=`${type}`
+				class=`input`
+				class=typeof data.class === "undefined" ? "" : data.class
+				value=typeof data.value === "undefined" ? "" : data.value
+				name=typeof data.name === "undefined" ? data.type: data.name
+				placeholder=typeof data.placeholder === "undefined" ? "" : data.placeholder
+				aria-required="true"
+				)&attributes(attr)
+
+	//-
+		if (data.btn)
+		- btnAttr = data.btn.attr
+		button(class=`input__button` class=data.btn.class)&attributes(btnAttr)!= data.btn.text
+//-
+	mixin inputDate(data)
+		//- атрибуты
+		- attr = data.attr || ''
+		- fieldName = data.fieldName
+
+		div(class="field-wrap")
+			input(
+				id= data.id
+				class=`form__field form__field--${fieldName} input`
+				type="date"
+				name=typeof data.name === "undefined" ? data.type: data.name
+				value=typeof data.value === "undefined" ? "" : data.value
+				placeholder=typeof data.placeholder === "undefined" ? "" : data.placeholder )&attributes(attr)
+			div(class=`form-message-fild form-message--${fieldName}`)
+			label(for=data.labelFor class="input__label")= data.labelText
+			
+
+mixin inputDate(data)
+	//- атрибуты
+	- attr = data.attr || ''
+	- type = data.type || 'text'
+	- fieldName = data.fieldName
+	- let ruble = "&#8381;";
+	- let id = data.id
+
+	div(class="form-field" class=data.dopClass)
+		if(data.fieldTitle)
+			span(class="field-title")= data.fieldTitle
+		input(
+			id=`${id}`
+			class=`input`
+			class=data.inputClass
+			type='date'
+			name=typeof data.name === "undefined" ? data.type: data.name
+			value=typeof data.value === "undefined" ? "" : data.value
+			placeholder=typeof data.placeholder === "undefined" ? "" : data.placeholder )&attributes(attr)
+		//-div(class=`form-message-fild form-message--${fieldName}`)
+		div(class=`form-message-fild `)
+		if(data.labelText)
+			label(for=`${id}` class="input__label")= data.labelText
+				
